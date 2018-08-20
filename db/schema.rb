@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_20_132230) do
+ActiveRecord::Schema.define(version: 2018_08_20_142242) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,15 +28,22 @@ ActiveRecord::Schema.define(version: 2018_08_20_132230) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
+  create_table "breeds", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "puppies", force: :cascade do |t|
     t.string "name"
-    t.string "breed"
     t.string "gender"
     t.integer "age"
     t.string "photo"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "breed_id"
+    t.index ["breed_id"], name: "index_puppies_on_breed_id"
     t.index ["user_id"], name: "index_puppies_on_user_id"
   end
 
