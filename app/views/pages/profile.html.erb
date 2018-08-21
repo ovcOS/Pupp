@@ -13,6 +13,16 @@
 <p><%= @user.email %></p>
 <a href="#" class="btn-pupp">Start now</a>
 
+
+<div class="tabs">
+  <a class="tab active" href="#">
+    <h3>Puppies</h3>
+  </a>
+  <a class="tab" href="#">
+    <h3>Bookings</h3>
+  </a>
+</div>
+
 <h4>My Puppies</h4>
 <% @user.owned_puppies.each do |puppy| %>
   <img class="avatar-large" src=<%= puppy.photo %> alt="">
@@ -22,6 +32,8 @@
     <li>Gender: <%= puppy.gender %></li>
   </ul>
 <% end %>
+
+
 
 
 <h4>My Booked Puppies</h4>
