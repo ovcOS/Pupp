@@ -6,12 +6,15 @@
 
 <p><%= @user.photo %></p>
 
-<div class="description">
+<div class="effect6">
   <div>
     <h4><%= @user.name %></h2>
     <p><%= @user.address %></p>
     <p><%= @user.phone_number %></p>
     <p><%= @user.email %></p>
+  </div>
+  <div>
+    <a href="#" class="btn-treehouse">Add Profile Information</a>
   </div>
 <div>
 
@@ -20,31 +23,32 @@
 
 <div class="tabs">
   <a class="tab active" href="#">
-    <h3>Puppies</h3>
+    <h3>My Puppies</h3>
   </a>
   <a class="tab" href="#">
-    <h3>Bookings</h3>
+    <h3>My Puppy Bookings</h3>
   </a>
 </div>
 
-<% @user.owned_puppies.each do |puppy| %>
-  <img class="avatar-large" src=<%= puppy.photo %> alt="">
-  <ul>
-    <li>Name: <%= puppy.name %></li>
-    <li>Age: <%= puppy.age %></li>
-    <li>Gender: <%= puppy.gender %></li>
-  </ul>
-<% end %>
+<div class="results">
+  <% @user.owned_puppies.each do |puppy| %>
+    <img class="avatar-large" src=<%= puppy.photo %> alt="">
+    <ul>
+      <li>Name: <%= puppy.name %></li>
+      <li>Age: <%= puppy.age %></li>
+      <li>Gender: <%= puppy.gender %></li>
+    </ul>
+  <% end %>
+  <a href="#" class="btn-pupp">Add a Puppy</a>
+</div>
 
-
-
-
-<h4>My Booked Puppies</h4>
-<% @user.booked_puppies.each do |puppy| %>
-  <img src=<%= puppy.photo %> alt="">
-  <ul>
-    <li>Name: <%= puppy.name %></li>
-    <li>Age: <%= puppy.age %></li>
-    <li>Gender: <%= puppy.gender %></li>
-  </ul>
+<div class="results">
+  <% @user.booked_puppies.each do |puppy| %>
+    <img src=<%= puppy.photo %> alt="">
+    <ul>
+      <li>Name: <%= puppy.name %></li>
+      <li>Age: <%= puppy.age %></li>
+      <li>Gender: <%= puppy.gender %></li>
+    </ul>
+</div>
 <% end %>

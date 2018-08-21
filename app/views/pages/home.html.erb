@@ -1,2 +1,27 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div id="banner">
+  <%= image_tag "PUPP.svg", class: "banner__image" %>
+</div>
+<div class='container'>
+  <div class='row'>
+    <div class="cards-container">
+      <% @puppies.each do |puppy| %>
+      <div class="col-xs-12 col-sm-4">
+        <div style="background-image: url(<%= puppy.photo %>); opacity:0.9" class="card-div"  >
+          <div class="card-title">
+            <%= puppy.name.capitalize%>
+          </div>
+
+          <div class="card-icons">
+            <div>
+              <%= link_to "<i class='fas fa-plus'></i>".html_safe, puppy_path(puppy) %>
+            </div>
+            <div>
+              <%= link_to "<i class='fas fa-heart'></i>".html_safe, puppy_path(puppy) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
