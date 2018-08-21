@@ -1,15 +1,35 @@
+<div class="profile-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%)">
+  <div class="banner-content">
+    <h1>Profile Information</h1>
+  </div>
+</div>
+
 <p><%= @user.photo %></p>
 
-<h1>Profile Information</h1>
+<h1></h1>
 <h4><%= @user.name %></h2>
-<p><%= @user.phone_number %></p>
 <p><%= @user.address %></p>
-<% end %>
+<p><%= @user.phone_number %></p>
+<p><%= @user.email %></p>
+<a href="#" class="btn-pupp">Start now</a>
 
 <h4>My Puppies</h4>
-<a class="btn btn-primary btn-md" src=<%= link_to "Add a new Puppy", new_cocktail_path %></a>
+<% @user.owned_puppies.each do |puppy| %>
+  <img class="avatar-large" src=<%= puppy.photo %> alt="">
+  <ul>
+    <li>Name: <%= puppy.name %></li>
+    <li>Age: <%= puppy.age %></li>
+    <li>Gender: <%= puppy.gender %></li>
+  </ul>
+<% end %>
+
 
 <h4>My Booked Puppies</h4>
-<a class="btn btn-primary btn-md" src=<%= link_to "Make a new Booking", new_cocktail_path %></a>
-
-
+<% @user.booked_puppies.each do |puppy| %>
+  <img src=<%= puppy.photo %> alt="">
+  <ul>
+    <li>Name: <%= puppy.name %></li>
+    <li>Age: <%= puppy.age %></li>
+    <li>Gender: <%= puppy.gender %></li>
+  </ul>
+<% end %>
