@@ -1,2 +1,41 @@
+<div class= "puppy-show__banner">
+
+
+</div>
+
+<div class= "puppy-show__top">
+  <div class="puppy-show__image" style="background-image: url('<%= @puppy.photo %>')"></div>
+</div>
+
+<div class="container">
+  <div class= "row">
+
+    <div class="col-xs-12 col-sm-6">
+      <div class="puppy-show__info">
+        <h3><%= @puppy.name %></h3>
+        <p>----------------------------------</p>
+        <p><%= @puppy.breed.name.capitalize %></p>
+        <p><%= @puppy.age * 12 %> months old</p>
+        <p><%= @puppy.gender.capitalize %></p>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+      <div class="puppy-show__message">
+        <h3> About me </h3>
+        <p>Hello there!</p>
+        <p>I am <%= @puppy.name %>, a very happy puppy.</p>
+        <p>I can't wait to meet my next playmate</p>
+        <p>Hit the book button if you like me</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class= puppy-show__button>
+  <%= link_to "BOOK", new_puppy_booking_path(@puppy), class: "btn btn-info" %>
+</div>
+
 
 
