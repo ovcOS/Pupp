@@ -1,0 +1,53 @@
+#banner {
+  background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(https://images.unsplash.com/photo-1521129529345-d4e9a83352b6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=faba6eb3c1cc7617fe41a6715114c2bf&auto=format&fit=crop&w=2074&q=80);
+  background-size: cover;
+  padding: 150px;
+  text-align: center;
+  color: white;
+  margin: 0px;
+}
+
+#banner h1 {
+  color: white;
+  font-size: 30px;
+}
+
+#banner p {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+  opacity: 0.85;
+}
+
+#banner a {
+  font-size: 18px;
+}
+
+
+.profile-banner {
+background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(https://images.unsplash.com/photo-1525253013412-55c1a69a5738?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3aa9feeafa35aafd43a4f9c90c8a9ef7&auto=format&fit=crop&w=2550&q=80);
+  background-size: cover;
+  padding: 150px;
+  text-align: center;
+  color: white;
+  margin: 0px;
+  height: 40vh;
+}
+
+.profile-banner h1 {
+  color: white;
+  font-size: 30px;
+}
+
+.profile-banner p {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+  opacity: 0.85;
+}
+
+.profile-banner a {
+  font-size: 18px;
+
+}
+
