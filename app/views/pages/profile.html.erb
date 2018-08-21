@@ -1,0 +1,15 @@
+<p><%= @user.photo %></p>
+
+<h1>Profile Information</h1>
+<h4><%= @user.name %></h2>
+<p><%= @user.phone_number %></p>
+<p><%= @user.address %></p>
+<% end %>
+
+<h4>My Puppies</h4>
+<a class="btn btn-primary btn-md" src=<%= link_to "Add a new Puppy", new_cocktail_path %></a>
+
+<h4>My Booked Puppies</h4>
+<a class="btn btn-primary btn-md" src=<%= link_to "Make a new Booking", new_cocktail_path %></a>
+
+
