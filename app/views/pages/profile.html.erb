@@ -6,13 +6,17 @@
 
 <p><%= @user.photo %></p>
 
-<h1></h1>
-<h4><%= @user.name %></h2>
-<p><%= @user.address %></p>
-<p><%= @user.phone_number %></p>
-<p><%= @user.email %></p>
-<a href="#" class="btn-pupp">Start now</a>
+<div class="description">
+  <div>
+    <h4><%= @user.name %></h2>
+    <p><%= @user.address %></p>
+    <p><%= @user.phone_number %></p>
+    <p><%= @user.email %></p>
+  </div>
+<div>
 
+  </div>
+</div>
 
 <div class="tabs">
   <a class="tab active" href="#">
@@ -23,7 +27,6 @@
   </a>
 </div>
 
-<h4>My Puppies</h4>
 <% @user.owned_puppies.each do |puppy| %>
   <img class="avatar-large" src=<%= puppy.photo %> alt="">
   <ul>
