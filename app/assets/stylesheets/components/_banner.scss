@@ -1,10 +1,18 @@
 #banner {
-  background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(https://images.unsplash.com/photo-1521129529345-d4e9a83352b6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=faba6eb3c1cc7617fe41a6715114c2bf&auto=format&fit=crop&w=2074&q=80);
+  background-color: $pastel-gray;
   background-size: cover;
   padding: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   color: white;
   margin: 0px;
+  height: 80vh;
+}
+
+.banner__image {
+  width: 400px;
 }
 
 #banner h1 {

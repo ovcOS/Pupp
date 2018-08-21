@@ -1,1 +1,40 @@
 // Specific CSS for your home-page
+.card-div {
+  width: 300px;
+  height: 200px;
+  color: white !important;
+  margin: 35px;
+  background-size: cover;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 4px 4px 20px 0px rgba(0,0,0,0.60);
+  &:hover {
+    box-shadow: 7px 6px 35px 0px rgba(0,0,0,0.60);
+  }
+}
+
+
+a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+
+.card-title {
+  postion: absolute;
+  top: 20px;
+  font-size: 30px;
+  font-family:  montserrat;
+  text-align: center;
+
+}
+
+
+.card-icons {
+  position: absolute;
+  bottom: 0px;
+  display:flex;
+  justify-content: space-between;
+  width: 300px;
+  padding: 10px;
+}
