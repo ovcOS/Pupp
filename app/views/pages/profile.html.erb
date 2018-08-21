@@ -3,52 +3,67 @@
     <h1>Profile Information</h1>
   </div>
 </div>
-
 <p><%= @user.photo %></p>
-
 <div class="effect6">
-  <div>
-    <h4><%= @user.name %></h2>
-    <p><%= @user.address %></p>
-    <p><%= @user.phone_number %></p>
-    <p><%= @user.email %></p>
+  <div class="user_info">
+    <h2><%= @user.name %></h2>
+    <div>
+      <p>Email: <%= @user.email %></p>
+      <p><%= @user.address %></p>
+      <p><%= @user.phone_number %></p>
+      <a class="btn-pupp" src=<%= link_to "Add a Puppy", new_puppy_url %></a>
+      <a class="btn-pupp" src=<%= link_to "Update Profile", edit_user_registration_url %></a>
+    </div>
   </div>
-  <div>
-    <a href="#" class="btn-treehouse">Add Profile Information</a>
-  </div>
+</div>
+</div>
 <div>
-
+  <div class="tabs">
+    <a class="tab active pup" href="#">
+      <h3 id="puppy_button">My Puppies</h3>
+    </a>
+    <a class="tab but" href="#">
+      <h3 id="bookings_button">My Booked Puppies</h3>
+    </a>
   </div>
 </div>
-
-<div class="tabs">
-  <a class="tab active" href="#">
-    <h3>My Puppies</h3>
-  </a>
-  <a class="tab" href="#">
-    <h3>My Puppy Bookings</h3>
-  </a>
+<div class="listings">
+  <div class="messages puppy_listings">
+    <% @user.owned_puppies.each do |puppy| %>
+    <div class="message ">
+      <img class="avatar-large" src=<%= puppy.photo %>>
+      <div class="message-name">
+        <h3><strong>Name: <%= puppy.name %></strong></h3>
+      </div>
+      <div class="message-body">
+        <p><strong>Age: </strong><%= puppy.age %></p>
+        <p><strong>Gender: </strong><%= puppy.gender %></p>
+        <a src=<%= link_to "See Puppy Listing", puppy %></a>
+        </div>
+        <div class="message-status">
+          <p class="status pending">Pending</p>
+          <p class="price">Free</p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="messages bookings_listings">
+    <% @user.owned_puppies.each do |puppy| %>
+    <div class="message ">
+      <img class="avatar-large" src=<%= puppy.photo %>>
+      <div class="message-name">
+        <h3><strong>Name: <%= puppy.name %></strong></h3>
+      </div>
+      <div class="message-body">
+        <p><strong>Age: </strong><%= puppy.age %></p>
+        <p><strong>Gender: </strong><%= puppy.gender %></p>
+        <a src=<%= link_to "See Puppy Listing", puppy %></a>
+        </div>
+        <div class="message-status">
+          <p class="status pending">Pending</p>
+          <p class="price">Free</p>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
-
-<div class="results">
-  <% @user.owned_puppies.each do |puppy| %>
-    <img class="avatar-large" src=<%= puppy.photo %> alt="">
-    <ul>
-      <li>Name: <%= puppy.name %></li>
-      <li>Age: <%= puppy.age %></li>
-      <li>Gender: <%= puppy.gender %></li>
-    </ul>
-  <% end %>
-  <a href="#" class="btn-pupp">Add a Puppy</a>
-</div>
-
-<div class="results">
-  <% @user.booked_puppies.each do |puppy| %>
-    <img src=<%= puppy.photo %> alt="">
-    <ul>
-      <li>Name: <%= puppy.name %></li>
-      <li>Age: <%= puppy.age %></li>
-      <li>Gender: <%= puppy.gender %></li>
-    </ul>
-</div>
-<% end %>

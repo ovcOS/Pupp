@@ -1,7 +1,8 @@
 .tabs {
   background: $white;
   display: flex;
-  padding: 10px 10px 0 10px
+  padding: 10px 10px 0 10px;
+  border-bottom: solid 1px $light-gray;
 }
 .tabs a {
   color: white;
@@ -14,14 +15,14 @@
 .tabs h3 {
   font-size: 17px;
   font-weight: bold;
-  margin-top: 0;
+  margin-top: 0px;
 }
 .tabs p {
   opacity: 0.5;
   margin-bottom: 0;
 }
 .tab {
-  background: #756A66;
+  background: $accent-blue;
   flex: 0 0 50%;
   text-align: center;
   padding: 20px 0;
