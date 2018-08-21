@@ -1,22 +1,9 @@
-
 require 'json'
 require 'open-uri'
 
+Puppy.destroy_all
 User.destroy_all
 Breed.destroy_all
-Puppy.destroy_all
-
-gender_array = ['male', 'female']
-
-url = "https://dog.ceo/api/breeds/image/random"
-dog_api = open(url).read
-dog_images = JSON.parse(dog_api)
-dog_pics = []
-
-100.times {
- dog_pics << dog_images['message']
-
- }
 breeds = [
   { name: 'affenpinscher' },
   { name: 'african' },
@@ -110,9 +97,12 @@ Breed.create!(breeds)
 30.times  {
   User.create(name: Faker::Name.name, email: Faker::Internet.email, password: Faker::String.random(9))
 }
+gender_array = ['male', 'female']
 
 100.times {
-  Puppy.create(name: Faker::Dog.name, user: User.order("RANDOM()").first, breed: Breed.order("RANDOM()").first, photo: dog_pics.sample, gender: gender_array.sample, age: rand(1..3))
+  breed = Breed.order("RANDOM()").first
+  url = "https://dog.ceo/api/breed/#{breed.name}/images/random"
+  dog_api = open(url).read
+  dog_images = JSON.parse(dog_api)
+  Puppy.create(name: Faker::Dog.name, user: User.order("RANDOM()").first, breed: breed, photo: dog_images['message'], gender: gender_array.sample, age: rand(1..3))
 }
-
-
