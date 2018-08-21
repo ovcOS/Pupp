@@ -3,15 +3,13 @@
   padding: 10px 15px;
   border-radius: 4px;
   font-weight: bold;
-  background: #BF5B8D;
+  background: $accent-purple;
   opacity: .9;
   transition: background 0.3s ease;
 }
 .btn-pupp:hover {
   opacity: 1;
-  background: #BF5B8D;
+  background: $accent-purple;
   text-decoration: none;
   color: white;
 }
-
-/* Build your own button classes ! */
