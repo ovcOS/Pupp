@@ -1,14 +1,33 @@
-<div id= "banner">
+<div class= "profile-banner">
+  <div class= "container">
+    <div class= "row">
+      <div class= "col-xs-12 col-md-6">
+        <%= image_tag("") %>
+      </div>
 
+    </div>
+
+  </div>
 </div>
 
-
-
-<ul class="puppy-info">
-  <li><%= @puppy.name %></li>
-  <li><%= @puppy.breed %></li>
-  <li><%= @puppy.age %></li>
-  <li><%= @puppy.gender %></li>
+<%= image_tag(@puppy.photo) %>
+<br>
+<table class="puppy-info-table">
+  <tr>
+    <td>Name </td>
+    <td><%= @puppy.name %></td>
+  </tr>
+  <tr>
+    <td>Breed </td>
+    <td><%= @puppy.breed.name.capitalize %></td>
+  </tr>
+  <tr>
+    <td>Age (months) </td>
+    <td><%= @puppy.age %></td>
+  </tr>
+  <tr>
+    <td>Gender </td>
+    <td><%= @puppy.gender.capitalize %></td>  </tr>
 </div>
 
 
