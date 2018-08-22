@@ -1,0 +1,67 @@
+<div class="profile-banner-update">
+</div>
+</div>
+<p><%= @user.photo %></p>
+<div class="effect6">
+  <div class="user_info">
+    <h2><%= @user.name %></h2>
+    <div>
+      <p><%= @user.email %></p>
+      <p><%= @user.address %></p>
+      <p><%= @user.phone_number %></p>
+      <a class="btn-pupp" src=<%= link_to "Add a Puppy", new_puppy_url %></a>
+      <a class="btn-pupp" src=<%= link_to "Update Profile", edit_user_registration_url %></a>
+    </div>
+  </div>
+</div>
+</div>
+<div>
+  <div class="tabs">
+    <a class="tab active pup" href="#">
+      <h3 id="puppy_button">My Puppies</h3>
+    </a>
+    <a class="tab but" href="#">
+      <h3 id="bookings_button">My Booked Puppies</h3>
+    </a>
+  </div>
+</div>
+<div class="listings">
+  <div class="messages puppy_listings">
+    <% @user.owned_puppies.each do |puppy| %>
+    <div class="message ">
+      <img class="avatar-large" src=<%= puppy.photo %>>
+      <div class="message-name">
+        <h3><strong>Name: <%= puppy.name %></strong></h3>
+      </div>
+      <div class="message-body">
+        <p><strong>Age: </strong><%= puppy.age %></p>
+        <p><strong>Gender: </strong><%= puppy.gender %></p>
+        <a src=<%= link_to "See Puppy Listing", puppy %></a>
+        </div>
+        <div class="message-status">
+          <p class="status pending">Pending</p>
+          <p class="price">Free</p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="messages bookings_listings" style="display: none;">
+    <% @user.booked_bookings.each do |booking| %>
+    <div class="message ">
+      <img class="avatar-large" src=<%= booking.photo %>>
+      <div class="message-name">
+        <h3><strong>Name: <%= booking.name %></strong></h3>
+      </div>
+      <div class="message-body">
+        <p><strong>Age: </strong><%= booking.age %></p>
+        <p><strong>Gender: </strong><%= booking.gender %></p>
+        <a src=<%= link_to "See Booking Listing", booking %></a>
+        </div>
+        <div class="message-status">
+          <p class="status pending">Pending</p>
+          <p class="price">Free</p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
