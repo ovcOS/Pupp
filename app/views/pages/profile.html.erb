@@ -45,17 +45,17 @@
       </div>
     <% end %>
   </div>
-  <div class="messages bookings_listings">
-    <% @user.owned_puppies.each do |puppy| %>
+  <div class="messages bookings_listings" style="display: none;">
+    <% @user.booked_bookings.each do |booking| %>
     <div class="message ">
-      <img class="avatar-large" src=<%= puppy.photo %>>
+      <img class="avatar-large" src=<%= booking.photo %>>
       <div class="message-name">
-        <h3><strong>Name: <%= puppy.name %></strong></h3>
+        <h3><strong>Name: <%= booking.name %></strong></h3>
       </div>
       <div class="message-body">
-        <p><strong>Age: </strong><%= puppy.age %></p>
-        <p><strong>Gender: </strong><%= puppy.gender %></p>
-        <a src=<%= link_to "See Puppy Listing", puppy %></a>
+        <p><strong>Age: </strong><%= booking.age %></p>
+        <p><strong>Gender: </strong><%= booking.gender %></p>
+        <a src=<%= link_to "See Booking Listing", booking %></a>
         </div>
         <div class="message-status">
           <p class="status pending">Pending</p>
