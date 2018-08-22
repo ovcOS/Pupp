@@ -16,6 +16,7 @@
   font-size: 17px;
   font-weight: bold;
   margin-top: 0px;
+  color: black;
 }
 .tabs p {
   opacity: 0.5;
@@ -35,7 +36,9 @@
 }
 .tab.active {
   background: white;
-  color: white;
   background: $accent-blue;
 
+  h3{
+    color: white;
+  }
 }

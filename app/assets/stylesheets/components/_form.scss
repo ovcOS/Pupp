@@ -36,5 +36,9 @@
   a {
     color: $accent-blue;
     opacity: 0.6;
+    &:hover {
+      color: $accent-blue;
+      opacity: 1;
+    }
   }
 }

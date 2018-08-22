@@ -5,20 +5,21 @@
         <div class="col-xs-12 col-md-6 col-md-offset-3">
           <div class="form">
             <div class="form__title">
-              <h2>Log in</h2>
+              <h2>Book <%= @puppy.name %></h2>
             </div>
             <div class="form__content">
               <%= simple_form_for([@puppy, @booking]) do |f| %>
                 <div class="form-inputs">
+                  <% time = Time.now + 1.hours %>
                   <%= f.input :starts_at, :input_html => { :class => 'time_input' },
                     required: true,
                     autofocus: true,
-                    as: :time, selected: Time.now + 1.hours
+                    as: :time, selected: time
                   %>
 
                   <%= f.input :ends_at, :input_html => { :class => 'time_input' },
                     required: true,
-                    as: :time, selected: Time.now + 2.hours
+                    as: :time, selected: time + 2.hours
                   %>
                 </div>
                 <div class="form-actions">
