@@ -34,9 +34,9 @@
 
 .puppy-show__info {
   text-align: center;
-  border: 1px solid $black;
+  border: 1px solid $pastel-gray;
   margin: 0px 20px 30px 0px;
-  padding: 0px 10px;
+  padding: 10px 10px;
   border-radius: 5px;
   background-color: $white;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
@@ -45,9 +45,9 @@
 
 .puppy-show__message {
   text-align: center;
-  border: 1px solid $black;
+  border: 1px solid $pastel-gray;
   margin: 0px 20px 30px 0px;
-  padding: 0px 10px;
+  padding: 10px 10px;
   border-radius: 5px;
   background-color: $white;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
@@ -60,3 +60,7 @@
   padding: 20px;
 }
 
+.puppy-show__background {
+  background-color: $light-gray;
+
+}

@@ -6,10 +6,30 @@
   background: $accent-blue;
   opacity: .9;
   transition: background 0.3s ease;
-}
-.btn-pupp:hover {
+  &:hover {
   opacity: 1;
   background: $accent-blue;
   text-decoration: none;
   color: white;
+  }
+}
+
+.btn-pupp__large{
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: $accent-blue;
+  opacity: .9;
+  transition: background 0.3s ease;
+  height: 65px;
+  width: 160px;
+  text-align: center;
+  font-size: 30px;
+  &:hover {
+  opacity: 1;
+  background: $accent-blue;
+  text-decoration: none;
+  color: white;
+  }
 }
