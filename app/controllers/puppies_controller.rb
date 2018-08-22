@@ -6,9 +6,20 @@ class PuppiesController < ApplicationController
   end
 
   def new
+    @puppy = Puppy.new
   end
 
   def create
+    @puppy = Puppy.create(puppy_params)
+    @user_id = current_user.id
+    @puppy.user_id = @user_id
+
+    if @puppy.save
+      redirect_to puppy_path(@puppy)
+    else
+      render :new
+    end
+    # raise
   end
 
   def edit
