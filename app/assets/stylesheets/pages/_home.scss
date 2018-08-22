@@ -1,4 +1,8 @@
 // Specific CSS for your home-page
+#row {
+  margin-top: 100px;
+}
+
 .card-div {
   width: 300px;
   height: 200px;
@@ -7,11 +11,12 @@
   background-size: cover;
   border-radius: 10px;
   position: relative;
-  box-shadow: 4px 4px 20px 0px rgba(0,0,0,0.60);
+  box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.60);
   &:hover {
-    box-shadow: 7px 6px 35px 0px rgba(0,0,0,0.60);
+    box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.60);
   }
 }
+
 
 
 a {
@@ -38,3 +43,86 @@ a {
   width: 300px;
   padding: 10px;
 }
+
+#btn-5 {
+  background: #AC6B8C;
+  color: #fff;
+  height: 70px;
+  min-width: 260px;
+  line-height: 24px;
+  font-size: 16px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  margin-bottom: 0px;
+}
+
+#btn-5:active {
+  background: #9053a9;
+  top: 2px;
+}
+
+#btn-5 span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s;
+  -webkit-backface-visibility: hidden;
+  -moz-transition: all 0.3s;
+  -moz-backface-visibility: hidden;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+#btn-5:before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 2.5;
+  font-size: 180%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#btn-5:active:before {
+  color: #703b87;
+}
+
+
+#btn-5:hover span {
+  transform: translateX(200%);
+}
+
+#btn-5:before {
+  left: -100%;
+  top: 0;
+}
+
+#btn-5:hover:before {
+  left: 0;
+}
+
+#btn-5:before {
+    left: 0;
+    top: -100%;
+    content: \f1b0;
+}
+
+#btn-5:before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    line-height: 2.5;
+    font-size: 180%;
+    transition: all 0.3s;
+}
+
+
+#btn-5:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
