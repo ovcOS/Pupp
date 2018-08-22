@@ -1,0 +1,40 @@
+.form {
+  background-color: white;
+  box-shadow: 2px 2px 2px lightgray;
+  border-radius: $border-radius;
+  overflow:hidden
+}
+
+.form__content {
+  padding: 20px 101px;
+}
+
+.form__title {
+  padding: 28px 0px;
+  background-color: $accent-purple;
+  text-align: center;
+  color: $white;
+}
+
+.form__submit {
+  background-color: $accent-blue;
+  width: 100%;
+  color: $white !important;
+  padding: 13px;
+  margin-top: 13px;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.form__log_in {
+  font-size: 14px;
+  margin-top: 15px;
+
+  a {
+    color: $accent-blue;
+    opacity: 0.6;
+  }
+}
