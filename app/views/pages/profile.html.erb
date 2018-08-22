@@ -48,17 +48,22 @@
   <div class="messages bookings_listings" style="display: none;">
     <% @user.booked_bookings.each do |booking| %>
     <div class="message ">
-      <img class="avatar-large" src=<%= booking.photo %>>
+      <img class="avatar-large" src=<%= booking.puppy.photo %>>
       <div class="message-name">
-        <h3><strong>Name: <%= booking.name %></strong></h3>
+        <h3><strong>Name: <%= booking.puppy.name %></strong></h3>
       </div>
       <div class="message-body">
-        <p><strong>Age: </strong><%= booking.age %></p>
-        <p><strong>Gender: </strong><%= booking.gender %></p>
-        <a src=<%= link_to "See Booking Listing", booking %></a>
+        <p><strong>Age: </strong><%= booking.puppy.age %></p>
+        <p><strong>Gender: </strong><%= booking.puppy.gender %></p>
         </div>
         <div class="message-status">
-          <p class="status pending">Pending</p>
+          <% if booking.status == Booking::PENDING %>
+            <p class="status pending">Pending</p>
+          <% elsif booking.status == Booking::ACCEPTED %>
+            <p class="status accepted">Accepted</p>
+          <% else %>
+            <p class="status declined">Declined</p>
+          <% end %>
           <p class="price">Free</p>
         </div>
       </div>
