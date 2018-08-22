@@ -1,4 +1,4 @@
-// Reset some tags to 0
+// Reset some tags
 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, footer, header, nav, section, summary {
   margin:0;
@@ -16,4 +16,9 @@ a {
   vertical-align:baseline;
   background:transparent;
   text-decoration: none;
+  color: black;
+
+  &:hover{
+    text-decoration: none;
+  }
 }

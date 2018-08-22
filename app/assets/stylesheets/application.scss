@@ -10,7 +10,9 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+// Prepare Website
 @import "config/reset";
+@import "config/defaults";
 
 // Your CSS partials
 @import "layouts/index";
