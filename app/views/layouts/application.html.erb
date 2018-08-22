@@ -29,8 +29,13 @@
             </ul>
           </div>
           <div class="navbar-wagon-right hidden-xs hidden-sm">
-            <button class="btn-signup">Sign up</button>
-            <button class="btn-signup">Log in</button>
+            <div class="btn-pupp">
+              <%= link_to "Sign Up", new_user_registration_path %>
+            </div>
+
+            <div class="btn-pupp">
+              <%= link_to "Sign In", new_user_session_path %>
+            </div>
           </div>
           <div class="navbar-wagon-item hidden-md hidden-lg">
             <div class="dropdown">
