@@ -70,10 +70,3 @@ a {
   background: #AC6B8C;
   opacity: 0.8;
 }
-
-#btn-5:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    transition: all 0.3s;
-}

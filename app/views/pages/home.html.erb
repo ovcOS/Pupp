@@ -14,20 +14,23 @@
     <h3>These are our puppies 🐶</h3>
     <div class="cards-container">
       <% @puppies.each do |puppy| %>
-      <div class="col-xs-12 col-sm-6 col-md-4">
+      <% if puppy.photo %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
 
 
-        <div class="puppy-card">
-          <%= link_to puppy_path(puppy) do %>
-            <%= image_tag(puppy.photo, class: "puppy-image") %>
+          <div class="puppy-card">
+            <%= link_to puppy_path(puppy) do %>
 
-            <div class="card-title">
-              <%= puppy.name.capitalize%>
-            </div>
-          <% end %>
+              <%= image_tag(puppy.photo, class: "puppy-image") %>
+
+              <div class="card-title">
+                <%= puppy.name.capitalize%>
+              </div>
+            <% end %>
+          </div>
+
         </div>
-
-      </div>
+      <% end %>
       <% end %>
     </div>
   </div>
