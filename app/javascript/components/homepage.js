@@ -1,7 +1,8 @@
 function windowScroller() {
   const homeButton = document.getElementById('btn-5')
-  homebutton.addEventListener('click', (event) => {
-    var smoothScroll = function() {
+  if(homeButton) {
+    homeButton.addEventListener('click', (event) => {
+      var smoothScroll = function() {
       var MIN_PIXELS_PER_STEP = 16;
       var MAX_SCROLL_STEPS = 30;
       var target = document.getElementById('row');
@@ -36,6 +37,8 @@ function windowScroller() {
     }
   smoothScroll()
   });
+  }
+
 }
 
 export { windowScroller };

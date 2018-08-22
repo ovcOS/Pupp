@@ -57,72 +57,11 @@ a {
   margin-bottom: 0px;
 }
 
-#btn-5:active {
-  background: #9053a9;
-  top: 2px;
-}
 
-#btn-5 span {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all 0.3s;
-  -webkit-backface-visibility: hidden;
-  -moz-transition: all 0.3s;
-  -moz-backface-visibility: hidden;
-  transition: all 0.3s;
-  backface-visibility: hidden;
-}
-
-#btn-5:before {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  line-height: 2.5;
-  font-size: 180%;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-#btn-5:active:before {
-  color: #703b87;
+#btn-5:hover {
+  background: #AC6B8C;
+  opacity: 0.8;
 }
 
 
-#btn-5:hover span {
-  transform: translateX(200%);
-}
-
-#btn-5:before {
-  left: -100%;
-  top: 0;
-}
-
-#btn-5:hover:before {
-  left: 0;
-}
-
-#btn-5:before {
-    left: 0;
-    top: -100%;
-    content: \f1b0;
-}
-
-#btn-5:before {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    line-height: 2.5;
-    font-size: 180%;
-    transition: all 0.3s;
-}
-
-
-#btn-5:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    transition: all 0.3s;
-}
 
