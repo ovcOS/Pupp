@@ -1,6 +1,6 @@
 class PuppiesController < ApplicationController
   before_action :find_puppy, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :authenticate_user!, only: :show
   def show
   end
 
