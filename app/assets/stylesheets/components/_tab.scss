@@ -5,13 +5,24 @@
   border-bottom: solid 1px $light-gray;
 }
 
+.tabs p {
+  opacity: 0.5;
+  margin-bottom: 0;
+}
+
+.tabs__tab_text {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 0px;
+  color: black;
+}
+
 .tabs__tab {
   border-bottom: solid 1px $accent-blue;
   flex: 0 0 50%;
   text-align: center;
   padding: 20px 0;
   text-decoration: none;
-
 
   &.active {
     background: white;
@@ -36,16 +47,4 @@
   &:last-child {
     border-radius: 0 10px 0 0;
   }
-}
-
-.tabs p {
-  opacity: 0.5;
-  margin-bottom: 0;
-}
-
-.tabs__tab_text {
-  font-size: 17px;
-  font-weight: bold;
-  margin-top: 0px;
-  color: black;
 }
