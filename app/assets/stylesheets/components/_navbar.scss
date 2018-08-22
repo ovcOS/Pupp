@@ -90,3 +90,21 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.btn-profile {
+    border: 2px solid $accent-blue;
+    border-radius: 5px;
+    color: white;
+    background: $accent-blue;
+    transition: none;
+    margin-left: 0px;
+    width: 150px;
+    text-align: center;
+}
+
+
+.btn-profile:hover {
+    background: transparent;
+    color: $white;
+    transition: all 0.3s ease 20ms;
+}

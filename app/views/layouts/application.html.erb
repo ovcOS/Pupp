@@ -31,13 +31,18 @@
             </ul>
           </div>
           <div class="navbar-wagon-right hidden-xs hidden-sm">
-            <div class="btn-pupp">
-              <%= link_to "Sign Up", new_user_registration_path %>
-            </div>
+            <% if user_signed_in? %>
+              <%= link_to "Profile", profile_path(current_user), class: 'btn-profile' %>
+            <% else %>
+              <div class="btn-pupp">
+                <%= link_to "Sign Up", new_user_registration_path %>
+              </div>
+              <div class="btn-pupp">
+                <%= link_to "Sign In", new_user_session_path %>
+              </div>
+            <% end %>
 
-            <div class="btn-pupp">
-              <%= link_to "Sign In", new_user_session_path %>
-            </div>
+
           </div>
           <div class="navbar-wagon-item hidden-md hidden-lg">
             <div class="dropdown">
