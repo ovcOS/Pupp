@@ -14,7 +14,9 @@
       <div class="navbar-wagon">
         <div class="navbar-wagon-item">
           <div class="dropdown">
-            <%= image_tag "PUPP.svg", class: "navbar__logo" %>
+            <%= link_to root_path do %>
+              <%= image_tag("PUPP.svg", class: "navbar__logo") %>
+            <% end %>
             <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
               <li>
                 <%= link_to "#" do %>
