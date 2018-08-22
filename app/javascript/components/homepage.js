@@ -3,42 +3,41 @@ function windowScroller() {
   if(homeButton) {
     homeButton.addEventListener('click', (event) => {
       var smoothScroll = function() {
-      var MIN_PIXELS_PER_STEP = 16;
-      var MAX_SCROLL_STEPS = 30;
-      var target = document.getElementById('row');
-      var scrollContainer = target;
-      do {
+        var MIN_PIXELS_PER_STEP = 16;
+        var MAX_SCROLL_STEPS = 30;
+        var target = document.getElementById('row');
+        var scrollContainer = target;
+        do {
           scrollContainer = scrollContainer.parentNode;
           if (!scrollContainer) return;
           scrollContainer.scrollTop += 1;
-      } while (scrollContainer.scrollTop == 0);
+        } while (scrollContainer.scrollTop == 0);
 
-      var targetY = 0;
-      do {
+        var targetY = 0;
+        do {
           if (target == scrollContainer) break;
           targetY += target.offsetTop;
-      } while (target = target.offsetParent);
+        } while (target = target.offsetParent);
 
-      var pixelsPerStep = Math.max(MIN_PIXELS_PER_STEP,
-                                   (targetY - scrollContainer.scrollTop) / MAX_SCROLL_STEPS);
+        var pixelsPerStep = Math.max(MIN_PIXELS_PER_STEP,
+         (targetY - scrollContainer.scrollTop) / MAX_SCROLL_STEPS);
 
-      var stepFunc = function() {
+        var stepFunc = function() {
           scrollContainer.scrollTop =
-              Math.min(targetY, pixelsPerStep + scrollContainer.scrollTop);
+          Math.min(targetY, pixelsPerStep + scrollContainer.scrollTop);
 
           if (scrollContainer.scrollTop >= targetY) {
-              return;
+            return;
           }
 
           window.requestAnimationFrame(stepFunc);
-      };
+        };
 
-      window.requestAnimationFrame(stepFunc);
-    }
-  smoothScroll()
-  });
+        window.requestAnimationFrame(stepFunc);
+      }
+      smoothScroll()
+    });
   }
-
 }
 
 export { windowScroller };
