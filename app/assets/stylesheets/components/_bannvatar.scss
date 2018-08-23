@@ -1,21 +1,26 @@
 .bannvatar {
   position: relative;
-
 }
+
 .bannvatar__banner {
-  filter: grayscale(80%);
   background-size: cover;
   background-position: center;
-  height: 40vh;
+  height: 60vh;
 }
 
 .bannvatar__image {
   background-size: cover;
   background-position: center;
-  width: 170px;
-  height: 170px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   position: absolute;
-  bottom: -81px;
-  left: 67px;
+  bottom: -100px;
+  left: 135px;
 }
+
+// <div class="bannvatar">
+//   <div class= "bannvatar__banner" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(image_url);
+// "></div>
+//   <div class="bannvatar__image" style="background-image: url(img_url)"></div>
+// </div>
