@@ -3,6 +3,7 @@ class PuppiesController < ApplicationController
   skip_before_action :authenticate_user!, only: :show
 
   def show
+    @booking = Booking.new
   end
 
   def new
