@@ -1,2 +1,23 @@
-// Specific CSS for your home-page
+.intro {
+  background-color: $pastel-gray;
+  height: 40vh;
+  padding: 30px;
 
+  img {
+    width: 150px;
+    height: 40px;
+    margin-bottom: 17px;
+  }
+  h3 {
+    text-align: bottom;
+    line-height: 40px;
+  }
+  p {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.intro__title {
+
+}
