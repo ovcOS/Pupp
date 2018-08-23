@@ -2,7 +2,6 @@
   background: $white;
   display: flex;
   padding: 10px 10px 0 10px;
-  border-bottom: solid 1px $light-gray;
 }
 
 .tabs p {
@@ -14,19 +13,19 @@
   font-size: 17px;
   font-weight: bold;
   margin-top: 0px;
-  color: black;
+  color: $light-gray;
 }
 
 .tabs__tab {
-  border-bottom: solid 1px $accent-blue;
   flex: 0 0 50%;
   text-align: center;
   padding: 20px 0;
   text-decoration: none;
+  background-color: $black;
 
   &.active {
     background: white;
-    background: $accent-blue;
+    background: $accent-purple;
     color: white;
   }
 
@@ -38,13 +37,5 @@
     cursor: pointer;
     text-decoration: none;
     opacity: 0.8;
-  }
-
-  &:first-child {
-    border-radius: 10px 0 0 0;
-  }
-
-  &:last-child {
-    border-radius: 0 10px 0 0;
   }
 }
