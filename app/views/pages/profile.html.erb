@@ -36,7 +36,7 @@
           <% @user.owned_puppies.each do |puppy| %>
           <div class="message">
             <div>
-              <img class=<%= puppy.photo %>>
+              <img class="avatar--small" src=<%= puppy.photo %>>
             </div>
             <div class="message__name">
               <h3> <%= puppy.name %></h3>
@@ -73,14 +73,14 @@
           <% @user.booked_bookings.each do |booking| %>
           <div class="message">
             <div>
-              <img class="avatar--large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+              <img class="avatar--small" src=<%= booking.puppy.photo %>>
             </div>
             <div>
               <div class="message__name">
                 <h3><%= booking.puppy.name %></h3>
               </div>
               <div class="message__date">
-                <p>2:00PM - 5:00 PM</p>
+                <p><%= booking.starts_at %> - <%= booking.ends_at %></p>
               </div>
             </div>
             <div class="message__body">
@@ -94,15 +94,15 @@
               </div>
               <div class="message__element">
                 <span><strong>LOCATION:</strong></span>
-                <span><%= booking.puppy.address %></span>
+                <span><%= booking.puppy.user.address %></span>
               </div>
             </div>
             <div class="message__status">
-              <% if bookings.puppy.status.empty? %>
+              <% if booking.status.empty? %>
                 <p class="status--pending">Pending</p>
-              <% elsif bookings.puppy.first.status == accepted %>
+              <% elsif booking.status == "accepted" %>
                 <p class="status--accepted">Accepted</p>
-              <% elsif bookings.puppy.first.status == rejected %>
+              <% elsif bookings.status == "rejected" %>
                 <p class="status--rejected">Rejected</p>
               <% else %>
                 <p class="status--rejected">Pending</p>

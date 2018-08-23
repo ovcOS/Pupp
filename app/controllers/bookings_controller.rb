@@ -38,7 +38,7 @@ class BookingsController < ApplicationController
       user_id: current_user.id
     )
 
-    redirect_to profile_path(current_user)
+    redirect_to profile_path
   end
 
   def destroy

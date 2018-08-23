@@ -11,7 +11,7 @@
     <!-- links on the right -->
     <% if user_signed_in? %>
       <div class="navbar__right-logged">
-        <%= link_to "MY PROFILE", profile_path(current_user), class: 'navbar__btn' %>
+        <%= link_to "MY PROFILE", profile_path, class: 'navbar__btn' %>
         <%= link_to "ADD A PUPPY", new_puppy_path, class: 'navbar__btn' %>
         <%= link_to "SIGN OUT", destroy_user_session_path, class: 'navbar__btn', method: :delete %>
       </div>
