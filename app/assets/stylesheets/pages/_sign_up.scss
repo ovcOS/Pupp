@@ -1,0 +1,43 @@
+#sign_up {
+
+  .banner {
+    height: 85vh;
+    justify-content: space-around;
+  }
+
+  .form {
+  width: 334px;
+
+  }
+
+  .form__content {
+  input, select {
+    margin-top: 39px;
+    }
+  }
+
+  .form_text {
+    font-size: 20px;
+  }
+
+  .form__title {
+    padding: 24px 0px;
+    background-color: $black;
+    text-align: center;
+    border-radius: $border-radius;
+  }
+
+  .form__submit {
+    margin-top: 39px;
+  }
+
+  .form__sign-up-message {
+  strong {
+    color: $accent-blue;
+    }
+  }
+
+  .form__sign-up-message-inner {
+    width: 400px;
+  }
+}
