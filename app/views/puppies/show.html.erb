@@ -1,5 +1,22 @@
-<div class="bannvatar">
-  <div class= "bannvatar__banner" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(https://images.unsplash.com/photo-1525253013412-55c1a69a5738?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3aa9feeafa35aafd43a4f9c90c8a9ef7&auto=format&fit=crop&w=2550&q=80);
-"></div>
-  <div class="bannvatar__image" style="background-image: url('<%= @puppy.photo %>')"></div>
+<div id="show_puppy_page">
+  <div class="bannvatar">
+    <div class= "bannvatar__banner" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(http://www.placepuppy.net/<%=rand(1..20)%>p/1300/600);
+  "></div>
+    <div class="bannvatar__image" style="background-image: url('<%= @puppy.photo %>')"></div>
+  </div>
+  <div class="show_puppy_container">
+    <div class="content_container">
+      <div class="content_title">Hi, I'm <%= @puppy.name.capitalize %>!</div>
+      <p class="content_pg">Doggo ipsum noodle horse heckin good boys and girls shooberino tungg ur givin me a spook wrinkler, much ruin diet tungg porgo. borkdrive you are doing me a frighten most angery pupper I have ever seen. very hand that feed shibe super chub. Adorable doggo long woofer heckin woofer blep dat tungg tho, what a nice floof wow such tempt doggo. ruff heckin good boys vvv. Length boy corgo sub woofer porgo long water shoob the neighborhood pupper wow such tempt fluffer, heckin floofs very jealous pupper the neighborhood pupper such treat. Ruff adorable doggo the neighborhood pupper stop it fren smol maximum borkdrive aqua doggo dat tungg tho, floofs he made many woofs very hand that feed shibe blop I am bekom fat aqua doggo.</p>
+      <div class="content_desc">Description</div>
+      <div class='desc_list'>
+        <ul>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <div class="form_container">
+
+    </div>
+  </div>
 </div>
