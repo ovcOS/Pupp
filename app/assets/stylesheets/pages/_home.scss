@@ -1,7 +1,10 @@
 .intro {
   background-color: $pastel-gray;
   height: 40vh;
-  padding: 30px;
+
+  display: flex;
+  align-items: center;
+  height: 50vh;
 
   img {
     width: 150px;
@@ -12,12 +15,17 @@
     text-align: bottom;
     line-height: 40px;
   }
+  h4 {
+    line-height: 40px;
+  }
+  .btn_pupp {
+    margin-top: 25px;
+  }
   p {
     margin-top: 25px;
     margin-bottom: 25px;
   }
 }
-
 .intro__title {
-
+  padding: 70px;
 }
