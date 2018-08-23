@@ -1,19 +1,23 @@
 .card {
   position: relative;
-  height: 238px;
-  width: 238px;
+  height: 370px;
+  width: 370px;
   box-shadow: 2px 2px 2px lightgrey;
+  border-radius: $border-radius;
+  overflow: hidden;
+  transition: all 1s;
 
   &:hover .card__overlay {
     display: inline-grid;
+    transition: all 1s;
   }
 
   &:hover .card__content {
-      display: none;
+    display: none;
   }
 
   &:hover .card__image {
-      height: 100%;
+    height: 100%;
   }
 }
 
@@ -21,24 +25,28 @@
   height: 65%;
   background-size: cover;
   background-position: center;
+
 }
 
 .card__content {
-  background-color: $accent-purple;
-  height: 35%;
+  background-color: $black;
+  height: 36%;
   color: white;
   display: flex;
   align-items: center;
+  border-top: 2px $accent-purple;
+
 }
 
 .card__title {
   flex-grow: 1;
   font-size: 16px;
-  text-align: center
+  text-align: center;
 }
 
 .card__overlay {
-  background-color: rgba(253, 253, 255, 1);
+  background-color: rgba(253, 253, 255, 0.7);
+  transition: all 1s;
   position: absolute;
   top: 0px;
   width: 100%;
@@ -49,28 +57,11 @@
   justify-content: center;
   color: black;
   display: none;
-  line-height: 2.5em
+  line-height: 2.5em;
 }
 
 .card__text {
-
+  text-align: center;
 }
 
-// <div class="card">
-//   <div class="card__image" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(image_path);"></div>
-//   <div class="card__content">
-//     <div class="card__title">
-//       <h4>Name</h4>
-//     </div>
-//   </div>
-
-//   <div class="card__overlay">
-//     <div class="card__text">
-//       <h4>Name</h4>
-//       <p>info</p>
-//       <p>info</p>
-//       <p>info</p>
-//     </div>
-//   </div>
-// </div>
 

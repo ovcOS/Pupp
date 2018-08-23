@@ -1,0 +1,63 @@
+.message {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  border-bottom: 1px solid $light-gray;
+  font-size: 15px;
+}
+.message__last-child {
+  border-bottom: none;
+}
+.message__body {
+  flex-grow: 1;
+}
+.message__header {
+  padding-left: 10px;
+  min-width: 100px;
+}
+.message__name {
+  font-size: 10px;
+  margin-bottom: 0px;
+  padding-left: 40px;
+}
+.message__date {
+  font-size: 15px;
+  font-weight: lighter;
+  opacity: 0.6;
+  margin-top: 5px;
+  padding-left: 40px;
+}
+.message__body {
+  display: flex;
+  margin-left: 30px;
+  font-size: 15px;
+  color: rgba(0,0,0,0.7);
+}
+
+.message__element {
+  padding-left: 30px;
+  margin: 6px 0;
+}
+
+.message__body strong{
+  color: rgba(0,0,0,0.9);
+  color: rgba(0,0,0,0.9);
+}
+
+.message__status {
+  font-size: 15px;
+  font-weight: bold;
+}
+.status--accepted {
+  color: #04A366;
+}
+.status--declined {
+  color: red;
+}
+.status--pending {
+  color: $black;
+}
+
+.message--red {
+  background-color: red;
+}

@@ -1,5 +1,5 @@
 function windowScroller() {
-  const homeButton = document.getElementById('btn-5')
+  const homeButton = document.querySelector('.btn_pupp')
   if(homeButton) {
     homeButton.addEventListener('click', (event) => {
       var smoothScroll = function() {
