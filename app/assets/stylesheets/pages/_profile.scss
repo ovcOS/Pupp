@@ -1,0 +1,41 @@
+.profile_page_container {
+  margin: 0px 135px;
+  margin-top: 60px;
+}
+
+.info {
+  background-color: $white;
+  margin: 0px 135px;
+  margin-top: 140px;
+  padding-bottom: 60px 0px;
+}
+
+.info__header {
+  font-size: 48px;
+  padding: 10px 0px;
+}
+
+.info__list {
+  padding-bottom: 30px;
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      padding: 10px 0px;
+      font-size: 30px;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+}
+.info__button {
+  padding-left: 0px 30px;
+}
+
+.listings {
+  margin-bottom: 250px;
+
+}
