@@ -1,3 +1,37 @@
 .profile_page_container {
   margin: 0px 135px;
 }
+
+.info {
+  background-color: $white;
+  margin: 0px 135px;
+  margin-top: 125px;
+  padding: 40px
+}
+
+.info__header {
+  font-size: 48px;
+  padding: 10px 0px;
+}
+
+.info__list {
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      padding: 10px 0px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+}
+.info__button {
+      a {
+        padding: 10px 0px;
+    }
+}
