@@ -1,0 +1,24 @@
+.about {
+  height: 85vh;
+  display: flex;
+  justify-content: top;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.about__header {
+  padding-bottom: 30px;
+}
+
+.about__text {
+  max-width: 700px;
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+
+.about__logo {
+  height: 200px;
+  width: 200px;
+}
