@@ -2,10 +2,6 @@ class PuppiesController < ApplicationController
   before_action :find_puppy, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:search, :show]
 
-  def index
-
-  end
-
   def search
     if params[:query].present?
       sql_query = " \
