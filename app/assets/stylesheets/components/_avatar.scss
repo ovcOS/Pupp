@@ -1,9 +1,16 @@
-.avatar-small {
-  width: 30px;
+.avatar {
+  width: 50px;
   border-radius: 50%;
 }
 
-.avatar-large {
-  width: 50px;
-  border-radius: 50%;
+.avatar--small {
+  width: 30px;
+}
+
+.avatar--large {
+  width: 70px;
+}
+
+.avatar--square {
+  border-radius: 2%;
 }
