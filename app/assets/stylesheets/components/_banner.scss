@@ -1,70 +1,28 @@
-#banner {
-  background-color: $pastel-gray;
+.banner {
   background-size: cover;
-  padding: 150px;
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
   align-items: center;
-  flex-direction: column;
-  color: white;
-  margin: 0px;
+
   height: 100vh;
 }
 
-.banner__image {
-  width: 400px;
-
-}
-
 .banner__intro {
-  padding: 35px;
-  text-align: center;
-  margin-bottom: 0px;
-  border-top: 1px solid #9CA7A6;
-}
-
-#banner h1 {
-  color: white;
-  font-size: 30px;
-}
-
-#banner p {
-  color: white;
-  font-size: 20px;
-  font-weight: lighter;
-  opacity: 0.85;
-}
-
-#banner a {
-  font-size: 18px;
-}
-
-
-.profile-banner {
-  background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(https://images.unsplash.com/photo-1525253013412-55c1a69a5738?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3aa9feeafa35aafd43a4f9c90c8a9ef7&auto=format&fit=crop&w=2550&q=80);
-  background-size: cover;
-  background-position: center;
-  padding: 150px;
-  text-align: center;
-  color: white;
-  margin: 0px;
-  height: 40vh;
-}
-
-.profile-banner h1 {
-  color: white;
-  font-size: 30px;
-}
-
-.profile-banner p {
-  color: white;
-  font-size: 20px;
-  font-weight: lighter;
-  opacity: 0.85;
-}
-
-.profile-banner a {
-  font-size: 18px;
-
+  position: relative;
+  margin-left: $margin;
+  text-align: left;
+  opacity: 1;
+  line-height: 100px;
+  h1 {
+    font-weight: 500px;
+    line-height: 100px;
+  }
+  strong {
+    color: $accent-blue;
+  }
+  .btn_pupp {
+    margin-top: 40px;
+    line-height: 25px;
+  }
 }
 
