@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   height: 50vh;
+  margin-bottom: 60px;
 
   img {
     width: 150px;
@@ -25,7 +26,21 @@
     margin-bottom: 25px;
   }
 }
+
 .intro__title {
   margin-right: $margin;
   margin-left: $margin;
+}
+
+.cards-container {
+  margin: 40px 135px 0px 110px;
+  display: flex;
+  justify-content: space-between;
+  h2 {
+    margin-left: 35px;
+  }
+}
+
+.card {
+  margin: 25px;
 }

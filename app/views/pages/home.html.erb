@@ -8,10 +8,79 @@
 <div class="intro">
   <div class="intro__title">
     <h3>Hi, we're<%= image_tag 'PUPP.svg' %> </h3>
-    <h4> If there’s one thing we can all agree upon, it’s that puppy’s are awesome. We connect dog owners and people who want to hang out with puppies.  Puppies can be a big investment, and a ton of work. Maybe you’re looking to test the waters of what it might be like? Or maybe you just want to hang out with a little puppy. Either way, we’ve got you covered. </h4>
+    <h4> If there’s one thing we can all agree upon, it’s that puppies are awesome. We connect dog owners and people who want to hang out with puppies.  Puppies can be a big investment, and a ton of work. Maybe you’re looking to test the waters of what it might be like? Or maybe you just want to hang out with a little puppy. Either way, we’ve got you covered. </h4>
     <button class="btn_pupp">About us</button>
   </div>
 </div>
-
-
-
+<div class="cards-container">
+  <div id="row">
+    <h2>Bulldogs</h2>
+    <% @bulldog.each do |puppy| %>
+      <div class="col-xs-12 col-md-4">
+        <div class="card">
+          <div class="card__image" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(<%= puppy.photo %>);"></div>
+          <div class="card__content">
+            <div class="card__title">
+              <h4><%= puppy.name.capitalize %></h4>
+            </div>
+          </div>
+          <div class="card__overlay">
+            <div class="card__text">
+              <h4><%= puppy.name %></h4>
+              <p><%= puppy.breed.name.capitalize %></p>
+              <p><%= puppy.age*12 %> months old</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="cards-container">
+  <div id="row">
+    <h2>Labradors</h2>
+    <% @labrador.each do |puppy| %>
+      <div class="col-xs-12 col-md-4">
+        <div class="card">
+          <div class="card__image" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(<%= puppy.photo %>);"></div>
+          <div class="card__content">
+            <div class="card__title">
+              <h4><%= puppy.name.capitalize %></h4>
+            </div>
+          </div>
+          <div class="card__overlay">
+            <div class="card__text">
+              <h4><%= puppy.name %></h4>
+              <p><%= puppy.breed.name.capitalize %></p>
+              <p><%= puppy.age*12 %> months old</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="cards-container">
+  <div id="row">
+    <h2>Youngest Pups</h2>
+    <% @youngestpups.each do |puppy| %>
+      <div class="col-xs-12 col-md-4">
+        <div class="card">
+          <div class="card__image" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(<%= puppy.photo %>);"></div>
+          <div class="card__content">
+            <div class="card__title">
+              <h4><%= puppy.name.capitalize %></h4>
+            </div>
+          </div>
+          <div class="card__overlay">
+            <div class="card__text">
+              <h4><%= puppy.name %></h4>
+              <p><%= puppy.breed.name.capitalize %></p>
+              <p><%= puppy.age*12 %> months old</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
