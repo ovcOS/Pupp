@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get 'profile/:id', to: 'pages#profile', as: 'profile'
   get 'search', to: 'puppies#search', as: 'search'
 
   resources :puppies do
