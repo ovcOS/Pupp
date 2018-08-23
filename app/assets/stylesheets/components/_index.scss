@@ -5,7 +5,12 @@
 @import "tab";
 @import "form";
 @import "button";
-@import "bannvatar";
 @import "card";
 @import "message";
+@import "bannvatar";
 
+// class names use one '_'; btn_pupp
+// Elements inside the component take the comp name and
+//  get their name added after a '__'; btn_pupp__text
+// A change in components attribute (size, color, etc)
+//  is described with '--'; btn_pupp--lg
