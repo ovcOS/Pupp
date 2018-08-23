@@ -1,0 +1,31 @@
+<nav class="navbar">
+  <div class="navbar__item">
+
+    <!-- pupp logo on the left -->
+    <div class="navbar__left">
+      <%= link_to root_path do %>
+      <%= image_tag("PUPP.svg", class: "navbar__logo") %>
+      <% end %>
+    </div>
+
+
+    <!-- links on the right -->
+
+    <% if user_signed_in? %>
+
+      <div class="navbar__right-logged">
+        <%= link_to "MY PROFILE", profile_path(current_user), class: 'navbar__btn' %>
+        <%= link_to "ADD A PUPPY", new_puppy_path, class: 'navbar__btn' %>
+        <%= link_to "SIGN OUT", destroy_user_session_path, class: 'navbar__btn' %>
+      </div>
+
+    <% else %>
+
+      <div class="navbar__right-notlogged">
+          <%= link_to "SIGN UP", new_user_registration_path, class: 'navbar__btn' %>
+          <%= link_to "SIGN IN", new_user_session_path, class: 'navbar__btn' %>
+        <% end %>
+      </div>
+
+  </div>
+</nav>
