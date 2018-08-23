@@ -1,29 +1,32 @@
 .form {
-  background-color: white;
-  box-shadow: 2px 2px 2px lightgray;
-  border-radius: $border-radius;
-  overflow:hidden
+  background-color: transparent;
+  color: $white;
+  max-width: 366px;
+  max-height: 570px;
 }
 
 .form__content {
-  padding: 20px 101px;
+  input, select {
+    margin-top: 45px;
+  }
+}
+
+.form_text {
+  font-size: 20px;
 }
 
 .form__title {
-  padding: 28px 0px;
-  background-color: $accent-purple;
+  padding: 24px 0px;
+  background-color: $black;
   text-align: center;
-  color: $white;
 }
 
 .form__submit {
   background-color: $accent-blue;
   width: 100%;
-  color: $white !important;
-  padding: 13px;
-  margin-top: 13px;
+  padding: 11px;
+  margin-top: 45px;
   opacity: 0.8;
-
   &:hover {
     opacity: 1;
   }
@@ -42,3 +45,24 @@
     }
   }
 }
+
+.form-group {
+  margin: 0px
+}
+
+// <div class="form">
+//   <div class="form__title">
+//     <div class="form__text">FORM TEXT</div>
+//   </div>
+//   <%= minimal_form_for @OBJECT do |f| %>
+//     <div class="form__content">
+//       <%= f.input :FIELD %>
+//       <%= f.input :FIELD  %>
+//       <%= f.input :FIELD %>
+//     </div>
+//     <div class="form-actions">
+//       <%= f.button :submit, "TEXT", class:'form__submit form__text'%>
+//     </div>
+//   <% end %>
+// </div>
+
