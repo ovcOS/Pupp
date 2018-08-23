@@ -1,40 +1,4 @@
-<div id="banner">
-  <%= image_tag "PUPP.svg", class: "banner__image" %>
-  <br>
-  <h3>Rent a puppy, put a smile on your face</h3>
-  <div class="banner__intro">
-    <p>Welcome to Pupp, the cuttest puppies are waiting to for you. Set play dates with any listed puppy. It doesn't matter if you're looking for joy or a cure for sadness, puppy cuteness is always the solution.</p>
-  </div>
-  <!-- <button id=btn-5 >
-    CHOOSE A PUPPY
-  </button> -->
-</div>
-<div class='container'>
-  <div id='row'>
-    <h3>These are our puppies 🐶</h3>
-    <div class="cards-container">
-      <% @puppies.each do |puppy| %>
-      <% if puppy.photo %>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-
-
-          <div class="puppy-card">
-            <%= link_to puppy_path(puppy) do %>
-
-              <%= image_tag(puppy.photo, class: "puppy-image") %>
-
-              <div class="card-title">
-                <%= puppy.name.capitalize%>
-              </div>
-            <% end %>
-          </div>
-
-        </div>
-      <% end %>
-      <% end %>
-    </div>
-  </div>
-</div>
+<p>Home Page</p>
 
 
 

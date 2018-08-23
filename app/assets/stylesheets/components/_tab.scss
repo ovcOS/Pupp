@@ -4,41 +4,47 @@
   padding: 10px 10px 0 10px;
   border-bottom: solid 1px $light-gray;
 }
-.tabs a {
-  color: black;
+
+.tabs p {
+  opacity: 0.5;
+  margin-bottom: 0;
 }
-.tabs a:hover {
-  cursor: pointer;
-  text-decoration: none;
-  opacity: 0.8;
-}
-.tabs h3 {
+
+.tabs__tab_text {
   font-size: 17px;
   font-weight: bold;
   margin-top: 0px;
   color: black;
 }
-.tabs p {
-  opacity: 0.5;
-  margin-bottom: 0;
-}
-.tab {
+
+.tabs__tab {
   border-bottom: solid 1px $accent-blue;
   flex: 0 0 50%;
   text-align: center;
   padding: 20px 0;
-}
-.tab:first-child {
-  border-radius: 10px 0 0 0;
-}
-.tab:last-child {
-  border-radius: 0 10px 0 0;
-}
-.tab.active {
-  background: white;
-  background: $accent-blue;
+  text-decoration: none;
 
-  h3{
+  &.active {
+    background: white;
+    background: $accent-blue;
     color: white;
+  }
+
+  &.active > .tabs__tab_text {
+    color: white;
+  }
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.8;
+  }
+
+  &:first-child {
+    border-radius: 10px 0 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 10px 0 0;
   }
 }
