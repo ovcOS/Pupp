@@ -41,9 +41,6 @@ class BookingsController < ApplicationController
     redirect_to profile_path
   end
 
-  def confirmation
-  end
-
   def destroy
     @booking.destroy
   end

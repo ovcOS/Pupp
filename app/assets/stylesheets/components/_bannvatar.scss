@@ -20,7 +20,7 @@
 }
 
 // <div class="bannvatar">
-//   <div class= "bannvatar__banner" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url("http://www.placepuppy.net/<=%rand(1..20)%>p/1300/600");
+//   <div class= "bannvatar__banner" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(http://www.placepuppy.net/<%=rand(1..20)%>p/1300/600);
 // "></div>
 //   <div class="bannvatar__image" style="background-image: url(img_url)"></div>
 // </div>
