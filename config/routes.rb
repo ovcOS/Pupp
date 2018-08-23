@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :puppies do
     resources :bookings, except: [:index, :edit, :update]
   end
+  get 'about', to: 'pages#about', as: 'about'
   get 'profile', to: 'pages#profile', as: 'profile'
   get 'puppies/:puppy_id/booking/:id/confirmation', to: 'bookings#confirmation', as: 'puppy_booking_confirmation'
 end
