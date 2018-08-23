@@ -1,35 +1,15 @@
-.btn-pupp{
+.btn_pupp{
   color: white;
-  padding: 10px 15px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: $accent-blue;
+  padding: 11px 50px;
+  border-radius: 23px;
+  background: #82BCB7;
   opacity: .9;
   transition: background 0.3s ease;
+
   &:hover {
-  opacity: 1;
-  background: $accent-blue;
-  text-decoration: none;
-  color: white;
+    opacity: 1;
+    color: white;
   }
 }
 
-.btn-pupp__large{
-  color: white;
-  padding: 10px 15px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: $accent-blue;
-  opacity: .9;
-  transition: background 0.3s ease;
-  height: 65px;
-  width: 160px;
-  text-align: center;
-  font-size: 30px;
-  &:hover {
-  opacity: 1;
-  background: $accent-blue;
-  text-decoration: none;
-  color: white;
-  }
-}
+//<a class='btn_pupp' href="">Click Me</a>
