@@ -7,6 +7,8 @@
 @import "button";
 @import "card";
 @import "message";
+@import "navbar";
+@import "footer";
 @import "bannvatar";
 
 // class names use one '_'; btn_pupp
@@ -14,3 +16,4 @@
 //  get their name added after a '__'; btn_pupp__text
 // A change in components attribute (size, color, etc)
 //  is described with '--'; btn_pupp--lg
+
