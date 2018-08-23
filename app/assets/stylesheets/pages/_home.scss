@@ -1,7 +1,6 @@
 .intro {
   background-color: $pastel-gray;
   height: 40vh;
-
   display: flex;
   align-items: center;
   height: 50vh;
@@ -27,5 +26,6 @@
   }
 }
 .intro__title {
-  padding: 70px;
+  margin-right: $margin;
+  margin-left: $margin;
 }
