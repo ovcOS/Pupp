@@ -7,16 +7,28 @@
   <div class="show_puppy_container">
     <div class="content_container">
       <div class="content_title">Hi, I'm <%= @puppy.name.capitalize %>!</div>
-      <p class="content_pg">Doggo ipsum noodle horse heckin good boys and girls shooberino tungg ur givin me a spook wrinkler, much ruin diet tungg porgo. borkdrive you are doing me a frighten most angery pupper I have ever seen. very hand that feed shibe super chub. Adorable doggo long woofer heckin woofer blep dat tungg tho, what a nice floof wow such tempt doggo. ruff heckin good boys vvv. Length boy corgo sub woofer porgo long water shoob the neighborhood pupper wow such tempt fluffer, heckin floofs very jealous pupper the neighborhood pupper such treat. Ruff adorable doggo the neighborhood pupper stop it fren smol maximum borkdrive aqua doggo dat tungg tho, floofs he made many woofs very hand that feed shibe blop I am bekom fat aqua doggo.</p>
-      <div class="content_desc">Description</div>
-      <div class='desc_list'>
-        <ul>
-          <li></li>
-        </ul>
-      </div>
+      <p class="content_pg"><%= @puppy.description %></p>
+      <div class="content_title">Description</div>
+      <ul class='desc_list'>
+        <li>Breed: <%= @puppy.breed.name.capitalize %></li>
+        <li>Age: <%= @puppy.age * 12 %> months old</li>
+      </ul>
     </div>
     <div class="form_container">
-
+      <div class="form">
+       <div class="form__title">
+         <div class="form__text">Hang with <%= @puppy.name.capitalize %> today!</div>
+       </div>
+       <%= minimal_form_for [@puppy, @booking] do |f| %>
+         <div class="form__content">
+           <%= f.input :starts_at, wrapper: :horizontal_select_date, selected: Time.now%>
+           <%= f.input :ends_at, wrapper: :horizontal_select_date, selected: Time.now + 1.hours %>
+         </div>
+         <div class="form-actions">
+           <%= f.button :submit, "Book", class:'form__submit form__text'%>
+         </div>
+       <% end %>
+      </div>
     </div>
   </div>
 </div>

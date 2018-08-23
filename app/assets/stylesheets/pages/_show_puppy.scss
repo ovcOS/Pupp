@@ -1,20 +1,22 @@
 #show_puppy_page {
   .show_puppy_container {
-    margin-top: 171px;
+    margin-top: 141px;
     margin-left: $margin;
     margin-right: $margin;
     display: flex;
     flex-direction: row;
+    padding-bottom: 76px;
   }
 
   .content_container {
-    flex-grow: 2;
 
   }
 
   .content_title {
     font-size: 40px;
     font-family: $headers-font;
+    margin-top: 30px;
+    margin-bottom: 11px;
 
   }
 
@@ -22,11 +24,25 @@
 
   }
 
-  .content_desc {
-
+  .desc_list {
+    list-style-type: none;
   }
 
   .form_container {
-    flex-grow: 1;
+    margin-left: 40px;
+  }
+
+  .form{
+    min-width: 304px;
+  }
+
+  .form__content {
+    select {
+      width: 40%;
+    }
+
+    .form-inline {
+      text-align: center;
+    }
   }
 }

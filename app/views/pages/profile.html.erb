@@ -80,7 +80,7 @@
                 <h3><%= booking.puppy.name %></h3>
               </div>
               <div class="message__date">
-                <p><%= booking.starts_at %> - <%= booking.ends_at %></p>
+                <p><%= booking.starts_at.time.strftime('%H:%M') %> - <%= booking.ends_at.time.strftime('%H:%M') %></p>
               </div>
             </div>
             <div class="message__body">
