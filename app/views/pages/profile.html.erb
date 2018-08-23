@@ -58,9 +58,9 @@
             <div class="message__status">
               <% if puppy.bookings.empty? %>
                 <p class="status--pending">Pending</p>
-              <% elsif puppy.bookings.first.status == accepted %>
+              <% elsif puppy.bookings.first.status == 'accepted' %>
                 <p class="status--accepted">Accepted</p>
-              <% elsif puppy.bookings.first.status == rejected %>
+              <% elsif puppy.bookings.first.status == 'rejected' %>
                 <p class="status--rejected">Rejected</p>
               <% else %>
                 <p class="status--rejected">Pending</p>
@@ -98,11 +98,11 @@
               </div>
             </div>
             <div class="message__status">
-              <% if booking.status.empty? %>
+              <% if booking.status == 'pending' %>
                 <p class="status--pending">Pending</p>
-              <% elsif booking.status == "accepted" %>
+              <% elsif booking.status == 'accepted' %>
                 <p class="status--accepted">Accepted</p>
-              <% elsif bookings.status == "rejected" %>
+              <% elsif bookings.status == 'rejected' %>
                 <p class="status--rejected">Rejected</p>
               <% else %>
                 <p class="status--rejected">Pending</p>

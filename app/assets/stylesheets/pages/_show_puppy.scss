@@ -1,0 +1,32 @@
+#show_puppy_page {
+  .show_puppy_container {
+    margin-top: 171px;
+    margin-left: $margin;
+    margin-right: $margin;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content_container {
+    flex-grow: 2;
+
+  }
+
+  .content_title {
+    font-size: 40px;
+    font-family: $headers-font;
+
+  }
+
+  .content_pg {
+
+  }
+
+  .content_desc {
+
+  }
+
+  .form_container {
+    flex-grow: 1;
+  }
+}
