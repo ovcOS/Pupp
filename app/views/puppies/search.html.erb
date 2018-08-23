@@ -3,21 +3,23 @@
     <h2>Search Results</h2>
     <% @puppies.each do |puppy| %>
       <div class="col-xs-12 col-md-4">
-        <div class="card">
-          <div class="card__image" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(<%= puppy.photo %>);"></div>
-          <div class="card__content">
-            <div class="card__title">
-              <h4><%= puppy.name.capitalize %></h4>
+        <%= link_to puppy_path(puppy) do %>
+          <div class="card">
+            <div class="card__image" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(<%= puppy.photo %>);"></div>
+            <div class="card__content">
+              <div class="card__title">
+                <h4><%= puppy.name.capitalize %></h4>
+              </div>
+            </div>
+            <div class="card__overlay">
+              <div class="card__text">
+                <h4><%= puppy.name %></h4>
+                <p><%= puppy.breed.name.capitalize %></p>
+                <p><%= puppy.age*12 %> months old</p>
+              </div>
             </div>
           </div>
-          <div class="card__overlay">
-            <div class="card__text">
-              <h4><%= puppy.name %></h4>
-              <p><%= puppy.breed.name.capitalize %></p>
-              <p><%= puppy.age*12 %> months old</p>
-            </div>
-          </div>
-        </div>
+        <% end %>
       </div>
     <% end %>
   </div>
