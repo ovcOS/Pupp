@@ -1,6 +1,6 @@
 <div>
   <div class="bannvatar">
-    <div class= "bannvatar__banner" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(https://images.unsplash.com/photo-1470390356535-d19bbf47bacb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=95074e295d3508187f3ec4825c9ab0ba&auto=format&fit=crop&w=1650&q=80)"></div>
+    <div class= "bannvatar__banner" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(http://www.placepuppy.net/<%=rand(1..20)%>p/1300/600)"></div>
     <div class="bannvatar__image" style="background-image: url(https://img.freepik.com/free-icon/user-avatar-main-picture_318-85015.jpg?size=338&ext=jpg)"></div>
   </div>
 </div>
@@ -10,15 +10,16 @@
   </div>
   <div class="info__list">
    <ul>
-     <li><strong>Name: </strong>Tom Patton</li>
-     <li><strong>Name: </strong>Tom Patton</li>
-     <li><strong>Name: </strong>Tom Patton</li>
+     <li><strong>Name: </strong><%= @user.name %></li>
+     <li><strong>Email: </strong><%= @user.email %></li>
+     <li><strong>Phone: </strong><%= @user.phone_number %></li>
+     <li><strong>Address: </strong><%= @user.address %></li>
    </ul>
-  </div>
-  <div class="info__button">
-    <a class='btn_pupp' href="">Click Me</a>
-    <a class='btn_pupp' href="">Click Me</a>
-  </div>
+ </div>
+ <div class="info__button">
+  <a class='btn_pupp' href="">Add a Puppy</a>
+  <a class='btn_pupp' href="">Update Profile</a>
+</div>
 </div>
 <div class="profile_page_container">
   <div class="row">
@@ -33,6 +34,7 @@
       </div>
       <div class="listings">
         <div class="puppy_listings">
+        <% @user.owned_puppies.each do |puppy| %>
           <div class="message">
             <div>
               <img class="avatar--large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
@@ -42,7 +44,6 @@
                 <h3>Gab Dehan</h3>
               </div>
               <div class="message__date">
-
               </div>
             </div>
             <div class="message__body">
@@ -62,42 +63,45 @@
             <div class="message__status">
               <p class="status--pending">Pending</p>
             </div>
+        <% end %>
           </div>
         </div>
-          <div class="bookings_listings" style="display: none;">
-            <div class="message">
-              <div>
-                <img class="avatar--large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+        <div class="bookings_listings" style="display: none;">
+          <% @user.booked_bookings.each do |booking| %>
+          <div class="message">
+            <div>
+              <img class="avatar--large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+            </div>
+            <div>
+              <div class="message__name">
+                <h3>Gab Dehan</h3>
               </div>
-              <div>
-                <div class="message__name">
-                  <h3>Gab Dehan</h3>
-                </div>
-                <div class="message__date">
-                  <p>2:00PM - 5:00 PM</p>
-                </div>
-              </div>
-              <div class="message__body">
-                <div class="message__element">
-                  <span><strong>NAME:</strong></span>
-                  <span>Honey</span>
-                </div>
-                <div class="message__element">
-                  <span><strong>AGE:</strong></span>
-                  <span>2 years old</span>
-                </div>
-                <div class="message__element">
-                  <span><strong>LOCATION:</strong></span>
-                  <span>Barcelona, Spain</span>
-                </div>
-              </div>
-              <div class="message__status">
-                <p class="status--pending">Pending</p>
-                <p class="price">Free</p>
+              <div class="message__date">
+                <p>2:00PM - 5:00 PM</p>
               </div>
             </div>
+            <div class="message__body">
+              <div class="message__element">
+                <span><strong>NAME:</strong></span>
+                <span>Honey</span>
+              </div>
+              <div class="message__element">
+                <span><strong>AGE:</strong></span>
+                <span><%= "{booking.puppy.age} years old." %></span>
+              </div>
+              <div class="message__element">
+                <span><strong>LOCATION:</strong></span>
+                <span>Barcelona, Spain</span>
+              </div>
+            </div>
+            <div class="message__status">
+              <p class="status--pending">Pending</p>
+              <p class="price">Free</p>
+            </div>
+            <% end %>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
