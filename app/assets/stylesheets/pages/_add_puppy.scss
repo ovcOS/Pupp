@@ -1,0 +1,13 @@
+.add-puppy-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 1100px;
+  align-items: center;
+
+}
+
+.form-control.text.optional {
+  margin-top: 25px;
+  border-radius: $border-radius;
+}
