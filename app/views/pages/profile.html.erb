@@ -1,7 +1,7 @@
-<div>
+<div class=''>
   <div class="bannvatar">
     <div class= "bannvatar__banner" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(http://www.placepuppy.net/<%=rand(1..20)%>p/1300/600)"></div>
-    <div class="bannvatar__image" style="background-image: url(<%= @user.photo %>)"></div>
+    <div class="profile bannvatar__image" style="background-image: url(<%= @user.photo %>)"></div>
   </div>
 </div>
 
@@ -27,12 +27,12 @@
 <div id="profile_page_container">
   <div class='my_puppies_container'>
     <h3>My Puppies</h3>
-    <table>
+    <table class="table table-striped table-hover">
       <thead>
         <tr>
-          <td>Name</td>
-          <td>Babysitter</td>
-          <td>Status</td>
+          <th>Name</th>
+          <th>Babysitter</th>
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
@@ -51,7 +51,7 @@
                   <%= link_to 'Reject', reject_booking_path(puppy, puppy.bookings.first) %>
                 </td>
               <% elsif puppy.bookings.first.status == 'accepted' %>
-                <td>Accepted</td>
+                <td style='color: #82BCB7'>Accepted</td>
               <% else %>
                 <td>Rejected</td>
               <% end %>
@@ -64,26 +64,26 @@
     </table>
   </div>
   <div class='babysitting_container'>
-    <h3>Babysitting</h3>
-    <table>
+    <h3>Today's Babysitting</h3>
+    <table class="table table-striped table-hover">
       <thead>
         <tr>
-          <td>Name</td>
-          <td>At</td>
-          <td>Location</td>
-          <td>Status</td>
+          <th>Name</th>
+          <th>At</th>
+          <th>Location</th>
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
         <% @user.booked_bookings.each do |booking| %>
           <tr>
-            <td><%= booking.puppy.name %></td>
+            <td><%= link_to booking.puppy.name, puppy_path(booking.puppy.id) %></td>
             <td><%= "#{booking.starts_at.strftime('%H:%M')} - #{booking.ends_at.strftime('%H:%M')}"%></td>
             <td><%= booking.puppy.user.address %></td>
             <% if booking.status == 'pending' %>
               <td>Pending</td>
             <% elsif booking.status == 'accepted' %>
-              <td>Accepted</td>
+              <td style='color: #82BCB7'>Accepted</td>
             <% else %>
               <td>Rejected</td>
             <% end %>

@@ -8,7 +8,41 @@
     box-shadow: none;
 
   }
+
+  .my_puppies_container {
+    margin-top: -6px;
+
+    a{
+      text-decoration: none;
+      color: black;
+      &:hover {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+
+  .babysitting_container {
+    margin-top: 55px;
+
+    a{
+      text-decoration: none;
+      color: black;
+      &:hover {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+
 }
+
+
+.profile.bannvatar__image {
+  left: unset;
+  right: 135px;
+}
+
 
 .info {
   background-color: $white;
