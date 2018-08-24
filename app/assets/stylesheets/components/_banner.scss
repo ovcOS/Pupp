@@ -2,7 +2,7 @@
   background-size: cover;
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 70px);
 }
 
 .banner__intro {
