@@ -1,7 +1,17 @@
 class PuppiesController < ApplicationController
   before_action :find_puppy, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:search, :show]
+  def index
+    @puppies = User.where.not(latitude: nil, longitude: nil)
 
+    @markers = @puppies.map do |puppy|
+      {
+        lat: puppy.latitude,
+        lng: puppy.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    end
+  end
   def search
     if params[:query].present?
       sql_query = " \
