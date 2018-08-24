@@ -24,6 +24,7 @@ class PuppiesController < ApplicationController
 
   def create
     @puppy = Puppy.create(puppy_params)
+    @puppy.photo = "http://www.placepuppy.net/#{rand(1..20)}p/1300/600"
     @user_id = current_user.id
     @puppy.user_id = @user_id
 

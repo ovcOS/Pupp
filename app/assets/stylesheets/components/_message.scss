@@ -1,7 +1,7 @@
 .message {
   display: flex;
   align-items: center;
-  padding: 50px;
+  padding: 50px 50px 50px 0px;
   border-bottom: 1px solid $light-gray;
   font-size: 15px;
 }
@@ -18,7 +18,7 @@
 .message__name {
   font-size: 10px;
   margin-bottom: 0px;
-  padding-left: 40px;
+  // padding-left: 40px;
 }
 .message__date {
   font-size: 15px;

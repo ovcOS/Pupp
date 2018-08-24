@@ -2,21 +2,21 @@
   <div class="banner__intro">
     <h1>Puppies are awesome.</h1>
     <h3><strong>Babysit</strong> one</h3>
-    <button class="btn_pupp">Find a puppy</button>
+    <button id='go-to-puppies' class="btn_pupp">Find a puppy</button>
   </div>
 </div>
 <div class="intro">
   <div class="intro__title">
     <h3>Hi, we're<%= image_tag 'PUPP.svg' %> </h3>
     <h4> If there’s one thing we can all agree upon, it’s that puppies are awesome. We connect dog owners and people who want to hang out with puppies.  Puppies can be a big investment, and a ton of work. Maybe you’re looking to test the waters of what it might be like? Or maybe you just want to hang out with a little puppy. Either way, we’ve got you covered. </h4>
-    <button src="about"class="btn_pupp">About us</button>
+    <div style='margin-top: 27px;'><a href="/about" class="btn_pupp">About us</a></div>
   </div>
 </div>
-<div class="cards-container">
+<div id='cards-container' class="cards-container">
   <div id="row">
     <h2>Bulldogs</h2>
     <% @bulldog.each do |puppy| %>
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-md-4 ">
         <%= link_to puppy_path(puppy) do %>
           <div class="card">
             <div class="card__image" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(<%= puppy.photo %>);"></div>
