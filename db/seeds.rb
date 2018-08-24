@@ -111,7 +111,7 @@ Breed.create!(breeds)
 }
 gender_array = ['male', 'female']
 
-100.times {
+350.times {
   breed = Breed.order("RANDOM()").first
   url = "https://dog.ceo/api/breed/#{breed.name}/images/random"
   dog_api = open(url).read
