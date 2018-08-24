@@ -1,10 +1,12 @@
 <div id="sign_up">
-  <div class="banner" style="background-image: linear-gradient(180deg, rgba(255,255,255,0) 0, rgba(255,255,255,0.8) 100%), url('https://images.unsplash.com/photo-1529927066849-79b791a69825?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=62b4436955bfd4ff22942d26abebb3c2&auto=format&fit=crop&w=1949&q=80');">
+  <div class="banner" style="background-image: linear-gradient(180deg, rgba(255,255,255,0) 0, rgba(255,255,255,0.8) 50%), url('https://images.unsplash.com/photo-1529927066849-79b791a69825?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=62b4436955bfd4ff22942d26abebb3c2&auto=format&fit=crop&w=1949&q=80');">
 
     <div class= "form__sign-up-message">
       <div class="add-puppy-content">
         <div class="form__sign-up-message-inner">
-          <h2>List a puppy and let someone take care of them for just a day. No more, we know you want to spend all your time cuddling with the little one.</h2>
+          <div class= "add-form__description">
+            <h2>List your <strong>puppy</strong> and let someone <strong>take care</strong> of him/her for just a day. No more, we know you want to spend all your time <strong>cuddling</strong> with the little one.</h2>
+          </div>
         </div>
         <div class="form">
           <div class="form__title">
@@ -15,7 +17,7 @@
             <%= f.input :name %>
             <%= f.input :age  %>
             <%= f.input :gender %>
-            <%= f.association :breed %>
+            <%= f.association :breed, prompt: 'Select breed'%>
             <%= f.input :description %>
           </div>
           <div class="form-actions">
@@ -25,6 +27,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </div>
 
