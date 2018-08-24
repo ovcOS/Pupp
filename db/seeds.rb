@@ -92,6 +92,13 @@ breeds = [
   { name: 'wolfhound' }
 ]
 
+pup_sentences =  ["I enjoy chasing tennis balls all day long. Please bring one if you come play with me!",
+                   "Not going to lie, I am a very lazy puppy. I love eating, sleeping, and cuddling.",
+                   "Hello! I am a very active puppy, make sure you are fully energized before you pick me up!",
+                   "My hobby number one is squirrel-chasing. However, I am indeed very clumsy, so I never caught one.",
+                   "I am a very lovey puppy. I enjoy licking my owner's face every morning."]
+pup_description = pup_sentences[rand(0..4)]
+
 Breed.create!(breeds)
 
 30.times  {
@@ -104,5 +111,5 @@ gender_array = ['male', 'female']
   url = "https://dog.ceo/api/breed/#{breed.name}/images/random"
   dog_api = open(url).read
   dog_images = JSON.parse(dog_api)
-  Puppy.create(name: Faker::Dog.name, user: User.order("RANDOM()").first, breed: breed, photo: dog_images['message'], gender: gender_array.sample, age: rand(1..3))
+  Puppy.create(name: Faker::Dog.name, user: User.order("RANDOM()").first, breed: breed, photo: dog_images['message'], gender: gender_array.sample, age: rand(1..3), description: pup_description)
 }
