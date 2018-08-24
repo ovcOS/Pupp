@@ -1,12 +1,19 @@
-.profile_page_container {
+#profile_page_container {
   margin: 0px 135px;
   margin-top: 30px;
+
+  .card {
+    width: 100%;
+    margin: 0px;
+    box-shadow: none;
+
+  }
 }
 
 .info {
   background-color: $white;
   margin: 0px 135px;
-  margin-top: 50px;
+  margin-top: 88px;
 }
 
 .info__header {
@@ -34,11 +41,4 @@
   padding-left: 0px 30px;
 }
 
-.listings {
-  // margin-bottom: 250px;
 
-}
-
-.message {
-  width: 463px;
-}

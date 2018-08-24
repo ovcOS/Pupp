@@ -24,105 +24,72 @@
    </div>
   </div>
 
-  <div class="profile_page_container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="tabs">
-          <a class="tabs__tab active pup" href="#">
-            <h3 class="tabs__tab_text" id="puppy_button">My Puppies</h3>
-          </a>
-          <!-- <a class="tabs__tab but" href="#">
-            <h3 class="tabs__tab_text" id="bookings_button">Puppies To Babysit Today!</h3>
-          </a> -->
-        </div>
-
-        <div class="listings">
-
-          <div class="puppy_listings">
-            <% @user.owned_puppies.each do |puppy| %>
-            <div class="message">
-              <div>
-
-              </div>
-              <div class="message__name">
-                <h3> <%= puppy.name %></h3>
-              </div>
-              <div class="message__body">
-                <div class="message__element">
-                  <span><strong>Breed:</strong></span>
-                  <span><%= puppy.breed.name %></span>
-                </div>
-                <div class="message__element">
-                  <span><strong>Age:</strong></span>
-                  <span><%= puppy.age %></span>
-                </div>
-               <!--  <div class="message__element">
-                  <span><strong>Location:</strong></span>
-                  <span><% puppy.user.address %></span>
-                </div> -->
-              </div>
-              <div class="message__status">
-                <% if puppy.bookings.empty? %>
-                  <p class="status--pending">Pending</p>
-                <% elsif puppy.bookings.first.status == 'accepted' %>
-                  <p class="status--accepted">Accepted</p>
-                <% elsif puppy.bookings.first.status == 'rejected' %>
-                  <p class="status--rejected">Rejected</p>
-                <% else %>
-                  <p class="status--rejected">Pending</p>
-                <% end %>
-              </div>
-            </div>
+<div id="profile_page_container">
+  <div class='my_puppies_container'>
+    <h3>My Puppies</h3>
+    <table>
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Babysitter</td>
+          <td>Status</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @user.owned_puppies.each do |puppy| %>
+          <tr>
+            <td><%= link_to puppy.name, puppy_path(puppy) %></td>
+            <% if puppy.booked %>
+              <td><%= link_to puppy.bookings.first.booker.name, user_profile_path(puppy.bookings.first.booker.id) %></td>
+            <% else %>
+              <td>None</td>
             <% end %>
-          </div>
-
-         <!--  <div class="bookings_listings" style="display: none;">
-            <% @user.booked_bookings.each do |booking| %>
-            <div class="message">
-
-              <div>
-                <img class="avatar--small" src=<%= booking.puppy.photo %>>
-              </div>
-              <div>
-                <div class="message__name">
-                  <h3><%= booking.puppy.name %></h3>
-                </div>
-                <div class="message__date">
-                  <p><%= booking.starts_at.time.strftime('%H:%M') %> - <%= booking.ends_at.time.strftime('%H:%M') %></p>
-                </div>
-              </div>
-              <div class="message__body">
-                <div class="message__element">
-                  <span><strong>Name:</strong></span>
-                  <span><%= booking.puppy.name %></span>
-                </div>
-                <div class="message__element">
-                  <span><strong>Age:</strong></span>
-                  <span><%= booking.puppy.age %></span>
-                </div>
-                <div class="message__element">
-                  <span><strong>Location:</strong></span>
-                  <span><%= booking.puppy.user.address %></span>
-                </div>
-              </div>
-              <div class="message__status">
-                <% if booking.status == 'pending' %>
-                  <p class="status--pending">Pending</p>
-                <% elsif booking.status == 'accepted' %>
-                  <p class="status--accepted">Accepted</p>
-                <% elsif bookings.status == 'rejected' %>
-                  <p class="status--rejected">Rejected</p>
-                <% else %>
-                  <p class="status--rejected">Pending</p>
-                <% end %>
-              </div>
+            <% if puppy.booked %>
+              <% if puppy.bookings.first.status == 'pending' %>
+                <td>
+                  <%= link_to 'Accept', accept_booking_path(puppy, puppy.bookings.first) %>
+                  <%= link_to 'Reject', reject_booking_path(puppy, puppy.bookings.first) %>
+                </td>
+              <% elsif puppy.bookings.first.status == 'accepted' %>
+                <td>Accepted</td>
+              <% else %>
+                <td>Rejected</td>
               <% end %>
-            </div>
-          </div> -->
-
-        </div>
-      </div>
-    </div>
-
+            <% else %>
+              <td>None</td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
-
+  <div class='babysitting_container'>
+    <h3>Babysitting</h3>
+    <table>
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>At</td>
+          <td>Location</td>
+          <td>Status</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @user.booked_bookings.each do |booking| %>
+          <tr>
+            <td><%= booking.puppy.name %></td>
+            <td><%= "#{booking.starts_at.strftime('%H:%M')} - #{booking.ends_at.strftime('%H:%M')}"%></td>
+            <td><%= booking.puppy.user.address %></td>
+            <% if booking.status == 'pending' %>
+              <td>Pending</td>
+            <% elsif booking.status == 'accepted' %>
+              <td>Accepted</td>
+            <% else %>
+              <td>Rejected</td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
