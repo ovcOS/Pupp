@@ -1,0 +1,21 @@
+#search-bar {
+
+  .form-control {
+    font-size: 15px;
+    height: 31px;
+    width: 300px;
+    background-color: $black;
+    border: 1px solid $white;
+    border-radius: 23px;
+    color: $white;
+    padding-left: 35px;
+  }
+
+  .input-addon {
+    float: left;
+    margin-left: 12px;
+    margin-top: -22px;
+    color: white;
+    font-size: 15px;
+  }
+}
