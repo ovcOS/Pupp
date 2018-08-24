@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :find_booking, only: [:show, :destroy]
+  before_action :find_booking, only: [:show, :destroy, :accept, :reject]
   before_action :find_puppy
 
 
@@ -33,11 +33,25 @@ class BookingsController < ApplicationController
       price: 0,
       starts_at: starts_at,
       ends_at: ends_at,
-      status: Booking::ACCEPTED,
+      status: Booking::PENDING,
       puppy_id: @puppy.id,
       user_id: current_user.id
     )
+    @puppy.booked = true
+    @puppy.save
 
+    redirect_to profile_path
+  end
+
+  def accept
+    @booking.status = Booking::ACCEPTED
+    @booking.save
+    redirect_to profile_path
+  end
+
+  def reject
+    @booking.status = Booking::REJECTED
+    @booking.save
     redirect_to profile_path
   end
 
