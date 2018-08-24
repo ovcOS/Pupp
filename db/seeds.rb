@@ -102,7 +102,12 @@ pup_description = pup_sentences[rand(0..4)]
 Breed.create!(breeds)
 
 30.times  {
-  User.create(name: Faker::Name.name, email: Faker::Internet.email, password: Faker::String.random(9))
+  url = "https://randomuser.me/api/?inc=name,%20location,\%20picture"
+  user_api = open(url).read
+  user_fields = JSON.parse(user_api)
+  name = user_fields["results"][0]["name"]["first"] + " " + user_fields["results"][0]["name"]["last"]
+  picture = user_fields["results"][0]["picture"]["large"]
+  User.create(name: name, email: Faker::Internet.email, address: Faker::Address.full_address, photo: picture, phone_number: Faker::PhoneNumber.cell_phone, password: Faker::String.random(9))
 }
 gender_array = ['male', 'female']
 
