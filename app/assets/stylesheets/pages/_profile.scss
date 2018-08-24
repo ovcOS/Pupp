@@ -1,17 +1,16 @@
 .profile_page_container {
   margin: 0px 135px;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .info {
   background-color: $white;
   margin: 0px 135px;
-  margin-top: 140px;
-  padding-bottom: 60px 0px;
+  margin-top: 50px;
 }
 
 .info__header {
-  font-size: 48px;
+  font-size: 35px;
   padding: 10px 0px;
 }
 
@@ -23,7 +22,7 @@
 
     li {
       padding: 10px 0px;
-      font-size: 30px;
+      font-size: 20px;
     }
 
     strong {
@@ -36,6 +35,10 @@
 }
 
 .listings {
-  margin-bottom: 250px;
+  // margin-bottom: 250px;
 
+}
+
+.message {
+  width: 463px;
 }

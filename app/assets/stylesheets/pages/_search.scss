@@ -1,0 +1,22 @@
+#search {
+  .cards-container {
+    min-height: calc(100vh - 193px);
+  }
+
+  .not-found-picture {
+    width: 100%;
+    min-height: calc(100vh - 193px);
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+
+  .not-found {
+    strong {
+      color: $accent-blue;
+    }
+    margin-left: 44px;
+    margin-bottom: 306px;
+  }
+}
