@@ -1,6 +1,6 @@
 .add-puppy-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row-reverse;
   width: 1100px;
   align-items: center;
@@ -8,6 +8,10 @@
 }
 
 .form-control.text.optional {
-  margin-top: 25px;
+  margin-top: 43px;
   border-radius: $border-radius;
+}
+
+.add-form__description h2 {
+  line-height: 1.4;
 }
