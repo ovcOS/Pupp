@@ -5,20 +5,11 @@
   box-shadow: 2px 2px 2px lightgrey;
   border-radius: $border-radius;
   overflow: hidden;
-  transition: all 1s;
 
   &:hover .card__overlay {
-    display: inline-grid;
-    transition: all 1s;
+    opacity: 1;
   }
 
-  &:hover .card__content {
-    display: none;
-  }
-
-  &:hover .card__image {
-    height: 100%;
-  }
 }
 
 .card__image {
@@ -46,7 +37,6 @@
 
 .card__overlay {
   background-color: rgba(253, 253, 255, 0.7);
-  transition: all 1s;
   position: absolute;
   top: 0px;
   width: 100%;
@@ -56,8 +46,11 @@
   align-content: center;
   justify-content: center;
   color: black;
-  display: none;
+  display: inline-grid;
   line-height: 2.5em;
+  transition: visibility 0s, opacity 0.5s linear;
+  opacity: 0;
+
 }
 
 .card__text {
