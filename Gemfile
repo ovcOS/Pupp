@@ -16,9 +16,9 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
-gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
 gem 'faker'
+gem 'pg_search'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

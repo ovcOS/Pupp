@@ -4,11 +4,7 @@ class PuppiesController < ApplicationController
 
   def search
     if params[:query].present?
-      sql_query = " \
-        breeds.name @@ :query \
-        OR puppies.gender @@ :query \
-      "
-      @puppies = Puppy.joins(:breed).where(sql_query, query: "%#{params[:query]}%")
+      @puppies = Puppy.global_search(params[:query])
     else
       @puppies = Puppy.all
     end
