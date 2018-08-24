@@ -1,8 +1,8 @@
 function tabsActivity() {
 
   const puppy_container = document.querySelector(".pup");
+  const bookings_container = document.querySelector(".but");
   if(puppy_container) {
-    const bookings_container = document.querySelector(".but");
   // removing and insterting the HTML.
     const puppy_listings = document.querySelector(".puppy_listings")
     const bookings_listings = document.querySelector(".bookings_listings")
