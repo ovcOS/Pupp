@@ -1,3 +1,13 @@
+<div id="puppModal" class="modal">
+  <div class="modal-content" style="background-image: linear-gradient(180deg, rgba(255,255,255,0.65) 0, rgba(255,255,255,0.8) 100%), url('<%= @puppy.photo %>');">
+   <span class="close">&times;</span>
+    <div class="confirmation-text">
+      <h1><strong>Requested!</strong></h1>
+      <h4>We'll let you know when <%= @puppy.name.capitalize %>'s owner confirms!</h4>
+    </div>
+  </div>
+</div>
+
 <div id="show_puppy_page">
   <div class="bannvatar">
     <div class= "bannvatar__banner" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(http://www.placepuppy.net/<%=rand(1..20)%>p/1300/600);
@@ -26,7 +36,7 @@
            <%= f.input :ends_at, wrapper: :horizontal_select_date, selected: Time.now + 1.hours %>
          </div>
          <div class="form-actions">
-           <%= f.button :submit, "Book", class:'form__submit form__text'%>
+           <%= f.button :submit, "Book", id: "btn_pupp", class:'form__submit form__text' %>
          </div>
        <% end %>
       </div>
