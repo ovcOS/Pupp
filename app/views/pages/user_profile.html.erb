@@ -1,0 +1,22 @@
+<div>
+  <div class="bannvatar">
+    <div class= "bannvatar__banner" style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(http://www.placepuppy.net/<%=rand(1..20)%>p/1300/600)"></div>
+    <div class="profile bannvatar__image" style="background-image: url(<%= @user.photo %>)"></div>
+  </div>
+</div>
+
+<div class="info">
+  <div class="info__header">
+    <h1><%= @user.name.capitalize %>'s Profile Information</h1>
+  </div>
+  <div class="info__list">
+     <ul>
+      <% @user.update!(phone_number:Faker::PhoneNumber.phone_number) if @user.phone_number.nil?  %>
+      <% @user.update!(address:Faker::Address.full_address) if @user.address.nil?  %>
+       <li><strong>Name: </strong><%= @user.name.capitalize %></li>
+       <li><strong>Email: </strong><%= @user.email %></li>
+       <li><strong>Phone: </strong><%= @user.phone_number %></li>
+       <li><strong>Address: </strong><%= @user.address %></li>
+     </ul>
+  </div>
+</div>
