@@ -14,17 +14,20 @@
   "></div>
     <div class="bannvatar__image" style="background-image: url('<%= @puppy.photo %>')"></div>
   </div>
+
   <div class="show_puppy_container">
     <div class="content_container">
       <div class="content_title">Hi, I'm <%= @puppy.name.capitalize %>!</div>
       <p class="content_pg"><%= @puppy.description %></p>
-      <div class="content_title">Description</div>
+      <br>
+      <div class="content_title">Info</div>
       <ul class='desc_list'>
         <li>Breed: <%= @puppy.breed.name.capitalize %></li>
         <li>Age: <%= @puppy.age * 12 %> months old</li>
         <li>Gender: <%= @puppy.gender.capitalize %></li>
       </ul>
     </div>
+
     <div class="form_container">
       <div class="form">
        <div class="form__title">
@@ -33,7 +36,9 @@
        <%= minimal_form_for [@puppy, @booking] do |f| %>
          <div class="form__content">
            <%= f.input :starts_at, wrapper: :horizontal_select_date, selected: Time.now%>
+          <span class= "form__tag">Pick-up time</span>
            <%= f.input :ends_at, wrapper: :horizontal_select_date, selected: Time.now + 1.hours %>
+           <span class="form__tag">Drop-off time</span>
          </div>
          <div class="form-actions">
            <%= f.button :submit, "Book", id: "btn_pupp", class:'form__submit form__text' %>
@@ -41,5 +46,6 @@
        <% end %>
       </div>
     </div>
+
   </div>
 </div>
