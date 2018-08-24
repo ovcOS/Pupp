@@ -13,5 +13,11 @@
 }
 
 .add-form__description h2 {
-  line-height: 1.4;
+  line-height: 1.5;
+}
+
+.form__sign-up-message {
+  select {
+    color: #989898 !important;
+  }
 }
